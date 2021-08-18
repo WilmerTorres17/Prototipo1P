@@ -54,6 +54,11 @@ namespace Prototipo1P
             this.pnlIconoBC = new System.Windows.Forms.Panel();
             this.txtBuscarC = new System.Windows.Forms.TextBox();
             this.dvgCobro = new System.Windows.Forms.DataGridView();
+            this.codigoCobroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentoVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cobrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCerrar = new System.Windows.Forms.Panel();
             this.lblSaldoVenta = new System.Windows.Forms.Label();
             this.txtSaldoVenta = new System.Windows.Forms.TextBox();
@@ -61,11 +66,6 @@ namespace Prototipo1P
             this.lblEliminarC = new System.Windows.Forms.Label();
             this.txtCodigoCo = new System.Windows.Forms.TextBox();
             this.lblCC = new System.Windows.Forms.Label();
-            this.codigoCobroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentoVentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cobrosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlSidebar.SuspendLayout();
             this.pnlPagos.SuspendLayout();
             this.pnlCobros.SuspendLayout();
@@ -243,7 +243,7 @@ namespace Prototipo1P
             this.pnlIconoC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlIconoC.BackgroundImage")));
             this.pnlIconoC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlIconoC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlIconoC.Location = new System.Drawing.Point(445, 242);
+            this.pnlIconoC.Location = new System.Drawing.Point(446, 251);
             this.pnlIconoC.Name = "pnlIconoC";
             this.pnlIconoC.Size = new System.Drawing.Size(59, 53);
             this.pnlIconoC.TabIndex = 10;
@@ -254,7 +254,7 @@ namespace Prototipo1P
             this.pnlMC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMC.BackgroundImage")));
             this.pnlMC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlMC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlMC.Location = new System.Drawing.Point(447, 242);
+            this.pnlMC.Location = new System.Drawing.Point(448, 251);
             this.pnlMC.Name = "pnlMC";
             this.pnlMC.Size = new System.Drawing.Size(56, 53);
             this.pnlMC.TabIndex = 11;
@@ -265,7 +265,7 @@ namespace Prototipo1P
             this.pnlEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlEliminar.BackgroundImage")));
             this.pnlEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pnlEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlEliminar.Location = new System.Drawing.Point(450, 242);
+            this.pnlEliminar.Location = new System.Drawing.Point(451, 251);
             this.pnlEliminar.Name = "pnlEliminar";
             this.pnlEliminar.Size = new System.Drawing.Size(53, 55);
             this.pnlEliminar.TabIndex = 12;
@@ -304,6 +304,34 @@ namespace Prototipo1P
             this.dvgCobro.Size = new System.Drawing.Size(448, 150);
             this.dvgCobro.TabIndex = 28;
             // 
+            // codigoCobroDataGridViewTextBoxColumn
+            // 
+            this.codigoCobroDataGridViewTextBoxColumn.DataPropertyName = "CodigoCobro";
+            this.codigoCobroDataGridViewTextBoxColumn.HeaderText = "Codigo Cobro";
+            this.codigoCobroDataGridViewTextBoxColumn.Name = "codigoCobroDataGridViewTextBoxColumn";
+            // 
+            // tipoPagoDataGridViewTextBoxColumn
+            // 
+            this.tipoPagoDataGridViewTextBoxColumn.DataPropertyName = "TipoPago";
+            this.tipoPagoDataGridViewTextBoxColumn.HeaderText = "Tipo Pago";
+            this.tipoPagoDataGridViewTextBoxColumn.Name = "tipoPagoDataGridViewTextBoxColumn";
+            // 
+            // documentoVentaDataGridViewTextBoxColumn
+            // 
+            this.documentoVentaDataGridViewTextBoxColumn.DataPropertyName = "DocumentoVenta";
+            this.documentoVentaDataGridViewTextBoxColumn.HeaderText = "Documento Venta";
+            this.documentoVentaDataGridViewTextBoxColumn.Name = "documentoVentaDataGridViewTextBoxColumn";
+            // 
+            // cantidadPagoDataGridViewTextBoxColumn
+            // 
+            this.cantidadPagoDataGridViewTextBoxColumn.DataPropertyName = "CantidadPago";
+            this.cantidadPagoDataGridViewTextBoxColumn.HeaderText = "Cantidad Pago";
+            this.cantidadPagoDataGridViewTextBoxColumn.Name = "cantidadPagoDataGridViewTextBoxColumn";
+            // 
+            // cobrosBindingSource
+            // 
+            this.cobrosBindingSource.DataSource = typeof(Prototipo1P.Clases.Cobros);
+            // 
             // pnlCerrar
             // 
             this.pnlCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlCerrar.BackgroundImage")));
@@ -317,7 +345,7 @@ namespace Prototipo1P
             // lblSaldoVenta
             // 
             this.lblSaldoVenta.AutoSize = true;
-            this.lblSaldoVenta.Location = new System.Drawing.Point(414, 278);
+            this.lblSaldoVenta.Location = new System.Drawing.Point(415, 287);
             this.lblSaldoVenta.Name = "lblSaldoVenta";
             this.lblSaldoVenta.Size = new System.Drawing.Size(67, 13);
             this.lblSaldoVenta.TabIndex = 3;
@@ -327,7 +355,7 @@ namespace Prototipo1P
             // txtSaldoVenta
             // 
             this.txtSaldoVenta.Enabled = false;
-            this.txtSaldoVenta.Location = new System.Drawing.Point(419, 303);
+            this.txtSaldoVenta.Location = new System.Drawing.Point(420, 312);
             this.txtSaldoVenta.Name = "txtSaldoVenta";
             this.txtSaldoVenta.Size = new System.Drawing.Size(121, 20);
             this.txtSaldoVenta.TabIndex = 2;
@@ -370,34 +398,6 @@ namespace Prototipo1P
             this.lblCC.Size = new System.Drawing.Size(71, 13);
             this.lblCC.TabIndex = 3;
             this.lblCC.Text = "Codigo Cobro";
-            // 
-            // codigoCobroDataGridViewTextBoxColumn
-            // 
-            this.codigoCobroDataGridViewTextBoxColumn.DataPropertyName = "CodigoCobro";
-            this.codigoCobroDataGridViewTextBoxColumn.HeaderText = "Codigo Cobro";
-            this.codigoCobroDataGridViewTextBoxColumn.Name = "codigoCobroDataGridViewTextBoxColumn";
-            // 
-            // tipoPagoDataGridViewTextBoxColumn
-            // 
-            this.tipoPagoDataGridViewTextBoxColumn.DataPropertyName = "TipoPago";
-            this.tipoPagoDataGridViewTextBoxColumn.HeaderText = "Tipo Pago";
-            this.tipoPagoDataGridViewTextBoxColumn.Name = "tipoPagoDataGridViewTextBoxColumn";
-            // 
-            // documentoVentaDataGridViewTextBoxColumn
-            // 
-            this.documentoVentaDataGridViewTextBoxColumn.DataPropertyName = "DocumentoVenta";
-            this.documentoVentaDataGridViewTextBoxColumn.HeaderText = "Documento Venta";
-            this.documentoVentaDataGridViewTextBoxColumn.Name = "documentoVentaDataGridViewTextBoxColumn";
-            // 
-            // cantidadPagoDataGridViewTextBoxColumn
-            // 
-            this.cantidadPagoDataGridViewTextBoxColumn.DataPropertyName = "CantidadPago";
-            this.cantidadPagoDataGridViewTextBoxColumn.HeaderText = "Cantidad Pago";
-            this.cantidadPagoDataGridViewTextBoxColumn.Name = "cantidadPagoDataGridViewTextBoxColumn";
-            // 
-            // cobrosBindingSource
-            // 
-            this.cobrosBindingSource.DataSource = typeof(Prototipo1P.Clases.Cobros);
             // 
             // frmCobros
             // 

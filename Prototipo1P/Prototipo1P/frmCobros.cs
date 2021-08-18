@@ -30,7 +30,7 @@ namespace Prototipo1P
             cobro.funLlenarCombo(cbxTC);
             cobro.funLlenarComboEnc(cbxDV);
         }
-
+        //hola
         private void frmCobros_Load(object sender, EventArgs e)
         {
             funCargarTabla(null);
