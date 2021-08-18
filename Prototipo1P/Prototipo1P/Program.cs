@@ -16,7 +16,11 @@ namespace Prototipo1P
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new frmCobro());
+=======
+            Application.Run(new frmCobros());
+>>>>>>> RamaMantenimiento9959189131
         }
     }
 }

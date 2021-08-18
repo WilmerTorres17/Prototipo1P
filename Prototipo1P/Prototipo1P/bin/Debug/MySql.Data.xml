@@ -21,6 +21,7 @@
             Defines the stage of the authentication.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.Authentication.MySqlClearPasswordPlugin">
             <summary>
             Allows connections to a user account set with the mysql_clear_password authentication plugin.
@@ -58,6 +59,8 @@
             Enables connections to a user account set with the authentication_kerberos authentication plugin.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin">
             <summary>
             Defines the default behavior for an authentication plugin.
@@ -143,6 +146,7 @@
             </summary>
             <returns>An object containing the encoded, encrypted, or converted password.</returns>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.Authentication.MySqlPemReader">
             <summary>
             Provides functionality to read, decode and convert PEM files to objects supported in .NET.
@@ -198,6 +202,8 @@
             <param name="s">The string to prepare.</param>
             <returns>The prepared string.</returns>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySql.Data.MySqlClient.Authentication.MySqlNativePasswordPlugin">
             <summary>
             Allows connections to a user account set with the mysql_native_password authentication plugin.
@@ -212,6 +218,7 @@
             <param name="seedBytes"></param>
             <returns></returns>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.Authentication.ScramBase">
             <summary>
             Base class to handle SCRAM authentication methods
@@ -330,6 +337,8 @@
             Gets the name of the method.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySql.Data.MySqlClient.Authentication.Sha256AuthenticationPlugin">
             <summary>
             The implementation of the sha256_password authentication plugin.
@@ -631,6 +640,7 @@
             Initializes the mapping.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.CharacterSet">
             <summary>
             Represents a character set object.
@@ -639,6 +649,11 @@
         <member name="T:MySql.Data.MySqlClient.MySqlCommand">
             <summary>Represents a SQL statement to execute against a MySQL database. This class cannot be inherited.</summary><remarks>
       The <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> object includes the following methods for executing commands at a MySQL database:
+=======
+        <member name="T:MySql.Data.MySqlClient.MySqlCommand">
+            <summary>Represents a SQL statement to execute against a MySQL database. This class cannot be inherited.</summary><remarks>
+      <B>MySqlCommand</B> features the following methods for executing commands at a MySQL database:
+>>>>>>> RamaMantenimiento9959189131
       <list type="table">
         <listheader>
           <term>Item</term>
@@ -646,24 +661,37 @@
         </listheader>
         <item>
           <term>
+<<<<<<< HEAD
             <see cref="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteReader" />
+=======
+            <a href="MySql.Data.MySqlClient.MySqlCommand.ExecuteReader_overloads.html">ExecuteReader</a>
+>>>>>>> RamaMantenimiento9959189131
           </term>
           <description>Executes commands that return rows.</description>
         </item>
         <item>
           <term>
+<<<<<<< HEAD
             <see cref="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery" />
+=======
+            <a href="MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery.html">ExecuteNonQuery</a>
+>>>>>>> RamaMantenimiento9959189131
           </term>
           <description>Executes commands such as SQL INSERT, DELETE, and UPDATE statements.</description>
         </item>
         <item>
           <term>
+<<<<<<< HEAD
             <see cref="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar" />
+=======
+            <a href="MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar.html">ExecuteScalar</a>
+>>>>>>> RamaMantenimiento9959189131
           </term>
           <description>Retrieves a single value (for example, an aggregate value) from a database.</description>
         </item>
       </list>
 
+<<<<<<< HEAD
       You can reset the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property and reuse the <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />
       object. However, you must close the <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> object before you can execute a new or previous command.
 
@@ -680,6 +708,29 @@
       The <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> object opens a connection and then is set as the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.Connection" />
       property for the <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />. The example then calls the <see cref="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery" /> method, 
       passes to it a connection string and a query string that consists of a SQL INSERT statement, and closes the connection.
+=======
+      You can reset the <B>CommandText</B> property and reuse the <B>MySqlCommand</B>
+      object. However, you must close the <A href="MySql.Data.MySqlClient.MySqlDataReader.html">MySqlDataReader</A>
+      before you can execute a new or previous command.
+
+      If a <A href="MySql.Data.MySqlClient.MySqlException.html">MySqlException</A> is
+      generated by the method executing a <B>MySqlCommand</B>, the <A href="MySql.Data.MySqlClient.MySqlConnection.html">MySqlConnection</A>
+      remains open.  It is the responsibility of the programmer to close the connection.
+
+      <note>
+        Using the '@' symbol for paramters is now the preferred approach although the old pattern of using
+		'?' is still supported.  Please be aware though that using '@' can cause conflicts when user variables
+		are also used.  To help with this situation please see the documentation on the 'allow user variables'
+		connection string option.  The 'old syntax' connection string option has now been deprecated.
+      </note>
+    </remarks><example>
+      The following example creates a <A href="frlrfsystemdatasqlclientsqlcommandclasstopic.htm">MySqlCommand</A> and
+      a <B>MySqlConnection</B>. The <B>MySqlConnection</B> is opened and set as the <A href="frlrfsystemdatasqlclientsqlcommandclassconnectiontopic.htm">Connection</A>
+      for the <B>MySqlCommand</B>. The example then calls <A href="frlrfsystemdatasqlclientsqlcommandclassexecutenonquerytopic.htm">ExecuteNonQuery</A>,
+      and closes the connection. To accomplish this, the <B>ExecuteNonQuery</B> is
+      passed a connection string and a query string that is a SQL INSERT
+      statement.
+>>>>>>> RamaMantenimiento9959189131
       <code lang="vbnet">
         Public Sub InsertRow(myConnectionString As String)
         " If the connection string is null, use a default.
@@ -1051,6 +1102,7 @@
       The SQL statement or stored procedure to execute. The default is an empty string.
     </value><remarks>
       <para>
+<<<<<<< HEAD
         When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <see cref="F:System.Data.CommandType.StoredProcedure" />,
         the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property should be set to the name of the stored procedure.
         The user may be required to use escape character syntax if the stored procedure name
@@ -1066,14 +1118,38 @@
           Dim myCommand As New MySqlCommand()
           myCommand.CommandText = "SELECT * FROM Mytable ORDER BY id"
           myCommand.CommandType = CommandType.Text
+=======
+        When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <B>StoredProcedure</B>,
+        the <B>CommandText</B> property should be set to the name of the stored procedure.
+        The user may be required to use escape character syntax if the stored procedure name
+        contains any special characters. The command executes this stored procedure when
+        you call one of the Execute methods.  Starting with Connector/NET 5.0, having both a stored function
+        and stored procedure with the same name in the same database is not supported.  It is
+        suggested that you provide unqiue names for your stored routines.
+      </para>
+    </remarks><example>
+      The following example creates a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> and sets some of its properties.
+      <code lang="vbnet">
+        Public Sub CreateMySqlCommand()
+        Dim myCommand As New MySqlCommand()
+        myCommand.CommandText = "SELECT * FROM Mytable ORDER BY id"
+        myCommand.CommandType = CommandType.Text
+>>>>>>> RamaMantenimiento9959189131
         End Sub
       </code>
       <code lang="C#">
         public void CreateMySqlCommand()
+<<<<<<< HEAD
           {
           MySqlCommand myCommand = new MySqlCommand();
           myCommand.CommandText = "SELECT * FROM mytable ORDER BY id";
           myCommand.CommandType = CommandType.Text;
+=======
+        {
+        MySqlCommand myCommand = new MySqlCommand();
+        myCommand.CommandText = "SELECT * FROM mytable ORDER BY id";
+        myCommand.CommandType = CommandType.Text;
+>>>>>>> RamaMantenimiento9959189131
         }
       </code>
     </example>
@@ -1095,6 +1171,7 @@
             <summary>
       Gets or sets a value indicating how the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property is to be interpreted.
     </summary><value>
+<<<<<<< HEAD
       One of the <see cref="T:System.Data.CommandType" /> values. 
       The default is <see cref="F:System.Data.CommandType.Text" />.
     </value><remarks>
@@ -1110,13 +1187,35 @@
         Public Sub CreateMySqlCommand()
           Dim myCommand As New MySqlCommand()
           myCommand.CommandType = CommandType.Text
+=======
+      One of the <see cref="T:System.Data.CommandType" /> values. The default is <B>Text</B>.
+    </value><remarks>
+      <para>
+        When you set the <B>CommandType</B> property to <B>StoredProcedure</B>, you
+        should set the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property to the name of the stored
+        procedure. The command executes this stored procedure when you call one of the
+        Execute methods.
+      </para>
+    </remarks><example>
+      The following example creates a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> and sets some of its properties.
+      <code lang="vbnet">
+        Public Sub CreateMySqlCommand()
+        Dim myCommand As New MySqlCommand()
+        myCommand.CommandType = CommandType.Text
+>>>>>>> RamaMantenimiento9959189131
         End Sub
       </code>
       <code lang="C#">
         public void CreateMySqlCommand()
+<<<<<<< HEAD
           {
           MySqlCommand myCommand = new MySqlCommand();
           myCommand.CommandType = CommandType.Text;
+=======
+        {
+        MySqlCommand myCommand = new MySqlCommand();
+        myCommand.CommandType = CommandType.Text;
+>>>>>>> RamaMantenimiento9959189131
         }
       </code>
     </example>
@@ -1129,6 +1228,7 @@
         </member>
         <member name="P:MySql.Data.MySqlClient.MySqlCommand.Connection">
             <summary>
+<<<<<<< HEAD
       Gets or sets the <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> object used by this instance of the
       <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />.
     </summary><value>
@@ -1140,6 +1240,19 @@
         <see cref="P:MySql.Data.MySqlClient.MySqlCommand.Transaction" /> property is not null, an <see cref="T:System.InvalidOperationException" />
         is generated. If the <b>Transaction</b> property is not null and the transaction
         has already been committed or rolled back, <b>Transaction</b> is set to
+=======
+      Gets or sets the <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> used by this instance of the
+      <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />.
+    </summary><value>
+      The connection to a data source. The default value is a null reference
+      (<B>Nothing</B> in Visual Basic).
+    </value><remarks>
+      <para>
+        If you set <B>Connection</B> while a transaction is in progress and the
+        <see cref="P:MySql.Data.MySqlClient.MySqlCommand.Transaction" /> property is not null, an <see cref="T:System.InvalidOperationException" />
+        is generated. If the <B>Transaction</B> property is not null and the transaction
+        has already been committed or rolled back, <B>Transaction</B> is set to
+>>>>>>> RamaMantenimiento9959189131
         null.
       </para>
     </remarks><example>
@@ -1167,21 +1280,31 @@
         </member>
         <member name="P:MySql.Data.MySqlClient.MySqlCommand.Parameters">
             <summary>
+<<<<<<< HEAD
       Gets the <see cref="T:MySql.Data.MySqlClient.MySqlParameterCollection" /> object.
+=======
+      Get the <see cref="T:MySql.Data.MySqlClient.MySqlParameterCollection" />
+>>>>>>> RamaMantenimiento9959189131
     </summary><value>
       The parameters of the SQL statement or stored procedure. The default is
       an empty collection.
     </value><remarks>
       Connector/NET does not support unnamed parameters.  Every parameter added to the collection must
       have an associated name.
+<<<<<<< HEAD
       
       <note>Parameters can be used along with <see cref="T:MySql.Data.MySqlClient.MySqlAttribute" />. There are no restrictions in this regard.</note>
     </remarks><example>
       The following example creates an instance of <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> and displays its parameters.
+=======
+    </remarks><example>
+      The following example creates a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> and displays its parameters.
+>>>>>>> RamaMantenimiento9959189131
       To accomplish this, the method is passed a <see cref="T:MySql.Data.MySqlClient.MySqlConnection" />, a query string
       that is a SQL SELECT statement, and an array of <see cref="T:MySql.Data.MySqlClient.MySqlParameter" /> objects.
       <code lang="vbnet">
         Public Sub CreateMySqlCommand(myConnection As MySqlConnection, _
+<<<<<<< HEAD
           mySelectQuery As String, myParamArray() As MySqlParameter)
             Dim myCommand As New MySqlCommand(mySelectQuery, myConnection)
             myCommand.CommandText = "SELECT id, name FROM mytable WHERE age=@age"
@@ -1197,10 +1320,28 @@
               myMessage += myCommand.Parameters(i).ToString() &amp; ControlChars.Cr
             Next i
             Console.WriteLine(myMessage)
+=======
+        mySelectQuery As String, myParamArray() As MySqlParameter)
+        Dim myCommand As New MySqlCommand(mySelectQuery, myConnection)
+        myCommand.CommandText = "SELECT id, name FROM mytable WHERE age=@age"
+        myCommand.UpdatedRowSource = UpdateRowSource.Both
+        myCommand.Parameters.Add(myParamArray)
+        Dim j As Integer
+        For j = 0 To myCommand.Parameters.Count - 1
+        myCommand.Parameters.Add(myParamArray(j))
+        Next j
+        Dim myMessage As String = ""
+        Dim i As Integer
+        For i = 0 To myCommand.Parameters.Count - 1
+        myMessage += myCommand.Parameters(i).ToString() &amp; ControlChars.Cr
+        Next i
+        Console.WriteLine(myMessage)
+>>>>>>> RamaMantenimiento9959189131
         End Sub
       </code>
       <code lang="C#">
         public void CreateMySqlCommand(MySqlConnection myConnection, string mySelectQuery,
+<<<<<<< HEAD
           MySqlParameter[] myParamArray)
         {
           MySqlCommand myCommand = new MySqlCommand(mySelectQuery, myConnection);
@@ -1275,12 +1416,30 @@
               Console.WriteLine($"Attribute1 Value: {reader.GetString(1)}");
             }
           }
+=======
+        MySqlParameter[] myParamArray)
+        {
+        MySqlCommand myCommand = new MySqlCommand(mySelectQuery, myConnection);
+        myCommand.CommandText = "SELECT id, name FROM mytable WHERE age=@age";
+        myCommand.Parameters.Add(myParamArray);
+        for (int j=0; j&lt;myParamArray.Length; j++)
+        {
+        myCommand.Parameters.Add(myParamArray[j]) ;
+        }
+        string myMessage = "";
+        for (int i = 0; i &lt; myCommand.Parameters.Count; i++)
+        {
+        myMessage += myCommand.Parameters[i].ToString() + "\n";
+        }
+        MessageBox.Show(myMessage);
+>>>>>>> RamaMantenimiento9959189131
         }
       </code>
     </example>
         </member>
         <member name="P:MySql.Data.MySqlClient.MySqlCommand.Transaction">
             <summary>
+<<<<<<< HEAD
       Gets or sets the instance of <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" /> within which <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> executes.
     </summary><value>
       The <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" />.  The default value is a null reference (<b>Nothing</b> in Visual Basic).
@@ -1288,6 +1447,15 @@
       You cannot set the <b>Transaction</b> property if it is already set to a
       specific value, and the command is in the process of executing. If you set the
       transaction to use a <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" /> object that is not connected
+=======
+      Gets or sets the <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" /> within which the <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> executes.
+    </summary><value>
+      The <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" />.  The default value is a null reference (<B>Nothing</B> in Visual Basic).
+    </value><remarks>
+      You cannot set the <B>Transaction</B> property if it is already set to a
+      specific value, and the command is in the process of executing. If you set the
+      transaction property to a <see cref="T:MySql.Data.MySqlClient.MySqlTransaction" /> object that is not connected
+>>>>>>> RamaMantenimiento9959189131
       to the same <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> as the <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> object,
       an exception will be thrown the next time you attempt to execute a statement.
     </remarks>
@@ -1387,12 +1555,18 @@
         </member>
         <member name="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteReader">
             <summary>
+<<<<<<< HEAD
       Sends the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> value to <see cref="T:MySql.Data.MySqlClient.MySqlConnection" />
       and builds a <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> object.
+=======
+      Sends the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> to the <see cref="T:MySql.Data.MySqlClient.MySqlConnection">Connection</see>
+      and builds a <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" />.
+>>>>>>> RamaMantenimiento9959189131
     </summary><returns>
       A <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> object.
     </returns><remarks>
       <para>
+<<<<<<< HEAD
         When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <b>StoredProcedure</b>,
         the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property should be set to the name of the stored
         procedure. The command executes this stored procedure when you call
@@ -1406,6 +1580,22 @@
       </para>
     </remarks><example>
       The following example creates an instance of <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />, then executes it by
+=======
+        When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <B>StoredProcedure</B>,
+        the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property should be set to the name of the stored
+        procedure. The command executes this stored procedure when you call
+        <B>ExecuteReader</B>.
+      </para>
+      <para>
+        While the <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> is in use, the associated
+        <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> is busy serving the <B>MySqlDataReader</B>.
+        While in this state, no other operations can be performed on the
+        <B>MySqlConnection</B> other than closing it. This is the case until the
+        <see cref="M:MySql.Data.MySqlClient.MySqlDataReader.Close" /> method of the <B>MySqlDataReader</B> is called.
+      </para>
+    </remarks><example>
+      The following example creates a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" />, then executes it by
+>>>>>>> RamaMantenimiento9959189131
       passing a string that is a SQL SELECT statement, and a string to use to connect to the
       data source.
       <code lang="vbnet">
@@ -1455,6 +1645,7 @@
       One of the <see cref="T:System.Data.CommandBehavior" /> values.
     </param><remarks>
       <para>
+<<<<<<< HEAD
         When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <b>StoredProcedure</b>,
         the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property should be set to the name of the stored
         procedure. The command executes this stored procedure when you call
@@ -1472,6 +1663,26 @@
         This is the case until the <see cref="M:MySql.Data.MySqlClient.MySqlDataReader.Close" /> method of the <b>MySqlDataReader</b> is called.
         If the <b>MySqlDataReader</b> object is created with <b>CommandBehavior</b> set to
         <b>CloseConnection</b>, closing the <b>MySqlDataReader</b> instance closes the connection
+=======
+        When the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandType" /> property is set to <B>StoredProcedure</B>,
+        the <see cref="P:MySql.Data.MySqlClient.MySqlCommand.CommandText" /> property should be set to the name of the stored
+        procedure. The command executes this stored procedure when you call
+        <B>ExecuteReader</B>.
+      </para>
+      <para>
+        The <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> supports a special mode that enables large binary
+        values to be read efficiently. For more information, see the <B>SequentialAccess</B>
+        setting for <see cref="T:System.Data.CommandBehavior" />.
+      </para>
+      <para>
+        While the <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" /> is in use, the associated
+        <see cref="T:MySql.Data.MySqlClient.MySqlConnection" /> is busy serving the <B>MySqlDataReader</B>.
+        While in this state, no other operations can be performed on the
+        <B>MySqlConnection</B> other than closing it. This is the case until the
+        <see cref="M:MySql.Data.MySqlClient.MySqlDataReader.Close" /> method of the <B>MySqlDataReader</B> is called.
+        If the <B>MySqlDataReader</B> is created with <B>CommandBehavior</B> set to
+        <B>CloseConnection</B>, closing the <B>MySqlDataReader</B> closes the connection
+>>>>>>> RamaMantenimiento9959189131
         automatically.
       </para>
       <note>
@@ -1494,14 +1705,22 @@
       result set is empty
     </returns><remarks>
       <para>
+<<<<<<< HEAD
         Use the <b>ExecuteScalar</b> method to retrieve a single value (for example,
+=======
+        Use the <B>ExecuteScalar</B> method to retrieve a single value (for example,
+>>>>>>> RamaMantenimiento9959189131
         an aggregate value) from a database. This requires less code than using the
         <see cref="M:MySql.Data.MySqlClient.MySqlCommand.ExecuteReader" /> method, and then performing the operations necessary
         to generate the single value using the data returned by a <see cref="T:MySql.Data.MySqlClient.MySqlDataReader" />
       </para>
     </remarks><example>
       The following example creates a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> and then
+<<<<<<< HEAD
       executes it using <b>ExecuteScalar</b>. The example is passed a string that is a
+=======
+      executes it using <B>ExecuteScalar</B>. The example is passed a string that is a
+>>>>>>> RamaMantenimiento9959189131
       SQL statement that returns an aggregate result, and a string to use to
       connect to the data source.
 
@@ -1725,6 +1944,14 @@
       </code>
     </example>
         </member>
+<<<<<<< HEAD
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlConnection._sshHandler">
+            <summary>
+            The client used to handle SSH connections.
+            </summary>
+        </member>
+>>>>>>> RamaMantenimiento9959189131
         <member name="E:MySql.Data.MySqlClient.MySqlConnection.InfoMessage">
             <summary>Occurs when MySQL returns warnings as a result of executing a command or query.</summary><remarks>
     </remarks>
@@ -1829,9 +2056,13 @@
       <para />
       You can change the value for these properties only by using the <B>ConnectionString</B> property.
     </remarks><example>
+<<<<<<< HEAD
     </example><param name="connectionString">
       The connection properties used to open the MySQL database.
     </param>
+=======
+    </example><param name="connectionString">The connection properties used to open the MySQL database. </param>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="P:MySql.Data.MySqlClient.MySqlConnection.IsClone">
             <summary>
@@ -2238,6 +2469,21 @@
             </td>
           </tr>
           <tr>
+<<<<<<< HEAD
+=======
+            <td>
+              Ignore Prepare
+            </td>
+            <td>true</td>
+            <td>
+              Instructs the provider to ignore any attempts to prepare commands.  This option
+              was added to allow a user to disable prepared statements in an entire application
+              without modifying the code.  A user might want to do this if errors or bugs are
+              encountered with MySQL prepared statements.
+            </td>
+          </tr>
+          <tr>
+>>>>>>> RamaMantenimiento9959189131
             <td>Use Procedure Bodies</td>
             <td>true</td>
             <td>
@@ -2552,8 +2798,13 @@
       </code>
     </example>
         </member>
+<<<<<<< HEAD
         <member name="M:MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(System.Data.IsolationLevel,System.String)">
             <summary>Begins a database transaction with the specified isolation level.</summary><param name="iso">The isolation level under which the transaction should run. </param><param name="scope">The scope of the transaction. </param><returns>An object representing the new transaction.</returns><exception cref="T:System.InvalidOperationException">Parallel exceptions are not supported.</exception><remarks>
+=======
+        <member name="M:MySql.Data.MySqlClient.MySqlConnection.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>Begins a database transaction with the specified isolation level.</summary><param name="iso">The isolation level under which the transaction should run. </param><returns>An object representing the new transaction.</returns><exception cref="T:System.InvalidOperationException">Parallel exceptions are not supported.</exception><remarks>
+>>>>>>> RamaMantenimiento9959189131
       <para>This command is equivalent to the MySQL BEGIN TRANSACTION command.</para>
       <para>
         You must explicitly commit or roll back the transaction using the <see cref="M:MySql.Data.MySqlClient.MySqlTransaction.Commit" /> or
@@ -2748,6 +2999,26 @@
       </code>
     </example>
         </member>
+<<<<<<< HEAD
+=======
+        <member name="M:MySql.Data.MySqlClient.MySqlConnection.ParseHostList(System.String)">
+            <summary>
+            Initializes the <see cref="T:MySql.Data.Failover.FailoverManager"/> if more than one host is found.
+            </summary>
+            <param name="hierPart">A string containing an unparsed list of hosts.</param>
+            <param name="connectionDataIsUri"><c>true</c> if the connection data is a URI; otherwise <c>false</c>.</param>
+            <returns>The number of hosts found, -1 if an error was raised during parsing.</returns>
+        </member>
+        <member name="M:MySql.Data.MySqlClient.MySqlConnection.ConvertToFailoverServer(System.String,System.Int32,System.Int32)">
+            <summary>
+            Creates a <see cref="T:MySql.Data.Failover.FailoverServer"/> object based on the provided parameters.
+            </summary>
+            <param name="host">The host string which can be a simple host name or a host name and port.</param>
+            <param name="priority">The priority of the host.</param>
+            <param name="port">The port number of the host.</param>
+            <returns></returns>
+        </member>
+>>>>>>> RamaMantenimiento9959189131
         <member name="M:MySql.Data.MySqlClient.MySqlConnection.CreateCommand">
             <summary>
       Creates and returns a <see cref="T:MySql.Data.MySqlClient.MySqlCommand" /> object associated with the <see cref="T:MySql.Data.MySqlClient.MySqlConnection" />.
@@ -5706,12 +5977,19 @@
       parameter placeholders within the command text, or an exception will be generated.
     </remarks><example>
       The following example creates multiple instances of <see cref="T:MySql.Data.MySqlClient.MySqlParameter" />
+<<<<<<< HEAD
       that are exposed as a collection through the <see cref="T:MySql.Data.MySqlClient.MySqlParameterCollection" />
       object within <see cref="T:MySql.Data.MySqlClient.MySqlDataAdapter" />.
       These parameters are used to select data within the data source and place the data in
       the <see cref="T:System.Data.DataSet" />. This code example assumes that a <b>DataSet</b> 
       object and an instance of <see cref="T:MySql.Data.MySqlClient.MySqlDataAdapter" /> were created properly 
       with the appropriate schema, commands, and connection.
+=======
+      through the <B>MySqlParameterCollection</B> collection within the <see cref="T:MySql.Data.MySqlClient.MySqlDataAdapter" />.
+      These parameters are used to select data within the data source and place the data in
+      the <see cref="T:System.Data.DataSet" />. This code assumes that a <B>DataSet</B> and a <B>MySqlDataAdapter</B>
+      have already been created with the appropriate schema, commands, and connection.
+>>>>>>> RamaMantenimiento9959189131
       <code lang="vbnet">
         Public Sub AddParameters()
         ' ...
@@ -6338,6 +6616,7 @@
             <param name="expiration"></param>
             <remarks>This version is for commands that only require a key and expiration.</remarks>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.MySqlAttribute">
             <summary>
             Represents a query attribute to a <see cref="T:MySql.Data.MySqlClient.MySqlCommand"/>.
@@ -6450,6 +6729,8 @@
             Returns an enumerator that iterates through the <see cref="T:MySql.Data.MySqlClient.MySqlAttributeCollection"/>. 
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder">
             <summary>
             Abstract class that provides common functionality for connection options that apply for all protocols.
@@ -6552,6 +6833,7 @@
             Gets or sets the path to a local certificate file in PEM format to use for establishing an encrypted connection.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.Keepalive">
             <summary>
             Gets or sets the idle connection time(seconds) for TCP connections.
@@ -6586,6 +6868,72 @@
             Returns a strongly typed <see cref="T:System.Data.Common.DbCommand"/> instance. 
             </summary>
             <returns>A new strongly typed instance of <b>DbCommand</b>.</returns>
+=======
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshHostName">
+            <summary>
+            Gets or sets the name of the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshPort">
+            <summary>
+            Gets or sets the port number to use when authenticating to the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshUserName">
+            <summary>
+            Gets or sets the user name to authenticate to the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshPassword">
+            <summary>
+            Gets or sets the password to authenticate to the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshKeyFile">
+            <summary>
+            Gets or sets the SSH key file to authenticate to the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.SshPassphrase">
+            <summary>
+            Gets or sets the passphrase of the key file to authenticate to the SSH server.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.Keepalive">
+            <summary>
+            Gets or sets the idle connection time(seconds) for TCP connections.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.CharacterSet">
+            <summary>
+            Gets or sets the character set that should be used for sending queries to the server.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.MySqlClient.MySqlBaseConnectionStringBuilder.AnalyzeConnectionString(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Analyzes the connection string for potential duplicated or invalid connection options.
+            </summary>
+            <param name="connectionString">Connection string.</param>
+            <param name="isXProtocol">Flag that indicates if the connection is using X Protocol.</param>
+            <param name="isDefaultPort">Flag that indicates if the default port is used.</param>
+        </member>
+        <member name="T:MySql.Data.MySqlClient.MySqlClientFactory">
+            <summary>
+            Represents a set of methods for creating instances of the MySQL client implementation of the data source classes.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlClientFactory.Instance">
+            <summary>
+            Gets an instance of the <see cref="T:MySql.Data.MySqlClient.MySqlClientFactory"/>. 
+            This can be used to retrieve strongly typed data objects. 
+            </summary>
+        </member>
+        <member name="M:MySql.Data.MySqlClient.MySqlClientFactory.CreateCommand">
+            <summary>
+            Returns a strongly typed <see cref="T:System.Data.Common.DbCommand"/> instance. 
+            </summary>
+            <returns>A new strongly typed instance of <b>DbCommand</b>.</returns>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="M:MySql.Data.MySqlClient.MySqlClientFactory.CreateConnection">
             <summary>
@@ -6689,11 +7037,14 @@
             to load data local infile.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.AllowLoadLocalInfileInPath">
             <summary>
             Gets or sets the safe path where files can be read and uploaded to the server.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.PersistSecurityInfo">
             <summary>
             Gets or sets a boolean value that indicates if the password should be persisted
@@ -6715,6 +7066,7 @@
             cause the connection attempt to fail if the user hasn't successfully connected to the server on a
             previous occasion.</remarks>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.DefaultAuthenticationPlugin">
             <summary>
             Gets or sets the default authentication plugin to be used. This plugin takes precedence over
@@ -6725,6 +7077,8 @@
             If no value is set, it uses the server-side default authentication plugin.
             </remarks>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.AllowZeroDateTime">
             <summary>
             Gets or sets a boolean value that indicates if zero date time values are supported.
@@ -6756,6 +7110,15 @@
             </summary>
             <remarks>Default value is <c>false</c>.</remarks>
         </member>
+<<<<<<< HEAD
+=======
+        <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.IgnorePrepare">
+            <summary>
+            Gets or sets a boolean value that indicates if calls to the Prepare method should be ignored.
+            </summary>
+            <remarks>Default value is <c>false</c>.</remarks>
+        </member>
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.MySqlClient.MySqlConnectionStringBuilder.AutoEnlist">
             <summary>
             Gets or sets a boolean value that indicates if an opened connection should particiapte in the current scope.
@@ -7347,6 +7710,7 @@
             Disables compression.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.CompressionAlgorithms">
             <summary>
             Defines the compression algorithms that can be used.
@@ -7399,6 +7763,8 @@
                 that is, the byte order used by System.Guid.ToByteArray and System.Guid.#ctor(System.Byte[]).
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySql.Data.MySqlClient.MySqlError">
             <summary>
             Collection of error codes that can be returned by the server
@@ -8185,14 +8551,21 @@
             <summary></summary>
             <remarks>ER_DUMP_NOT_IMPLEMENTED</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.FlushSourceBinLogClosed">
             <summary></summary>
             <remarks>ER_FLUSH_SOURCE_BINLOG_CLOSED</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.FlushMasterBinLogClosed">
+            <summary></summary>
+            <remarks>ER_FLUSH_MASTER_BINLOG_CLOSED</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.IndexRebuild">
             <summary></summary>
             <remarks>ER_INDEX_REBUILD</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SourceError">
             <summary></summary>
             <remarks>ER_SOURCE</remarks>
@@ -8204,6 +8577,19 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SourceNetWrite">
             <summary></summary>
             <remarks>ER_SOURCE_NET_WRITE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MasterError">
+            <summary></summary>
+            <remarks>ER_MASTER</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MasterNetRead">
+            <summary></summary>
+            <remarks>ER_MASTER_NET_READ</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MasterNetWrite">
+            <summary></summary>
+            <remarks>ER_MASTER_NET_WRITE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.FullTextMatchingKeyNotFound">
             <summary></summary>
@@ -8233,6 +8619,7 @@
             <summary></summary>
             <remarks>ER_TRANS_CACHE_FULL</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaMustStop">
             <summary></summary>
             <remarks>ER_REPLICA_MUST_STOP</remarks>
@@ -8252,6 +8639,27 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaThread">
             <summary></summary>
             <remarks>ER_REPLICA_THREAD</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveMustStop">
+            <summary></summary>
+            <remarks>ER_SLAVE_MUST_STOP</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveNotRunning">
+            <summary></summary>
+            <remarks>ER_SLAVE_NOT_RUNNING</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.BadSlave">
+            <summary></summary>
+            <remarks>ER_BAD_SLAVE</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MasterInfo">
+            <summary></summary>
+            <remarks>ER_MASTER_INFO</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveThread">
+            <summary></summary>
+            <remarks>ER_SLAVE_THREAD</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.TooManyUserConnections">
             <summary></summary>
@@ -8313,6 +8721,7 @@
             <summary></summary>
             <remarks>ER_ROW_IS_REFERENCED</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ConnectToSource">
             <summary></summary>
             <remarks>ER_CONNECT_TO_SOURCE</remarks>
@@ -8320,6 +8729,15 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.QueryOnSource">
             <summary></summary>
             <remarks>ER_QUERY_ON_SOURCE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ConnectToMaster">
+            <summary></summary>
+            <remarks>ER_CONNECT_TO_MASTER</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.QueryOnMaster">
+            <summary></summary>
+            <remarks>ER_QUERY_ON_MASTER</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ErrorWhenExecutingCommand">
             <summary></summary>
@@ -8385,6 +8803,7 @@
             <summary></summary>
             <remarks>ER_NOT_SUPPORTED_YET</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SourceFatalErrorReadingBinLog">
             <summary></summary>
             <remarks>ER_SOURCE_FATAL_ERROR_READING_BINLOG</remarks>
@@ -8392,6 +8811,15 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaIgnoredTable">
             <summary></summary>
             <remarks>ER_REPLICA_IGNORED_TABLE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MasterFatalErrorReadingBinLog">
+            <summary></summary>
+            <remarks>ER_MASTER_FATAL_ERROR_READING_BINLOG</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveIgnoredTable">
+            <summary></summary>
+            <remarks>ER_SLAVE_IGNORED_TABLE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.IncorrectGlobalLocalVariable">
             <summary></summary>
@@ -8457,6 +8885,7 @@
             <summary></summary>
             <remarks>ER_COLLATION_CHARSET_MISMATCH</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaWasRunning">
             <summary></summary>
             <remarks>ER_REPLICA_WAS_RUNNING</remarks>
@@ -8464,6 +8893,15 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaWasNotRunning">
             <summary></summary>
             <remarks>ER_REPLICA_WAS_NOT_RUNNING</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveWasRunning">
+            <summary></summary>
+            <remarks>ER_SLAVE_WAS_RUNNING</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveWasNotRunning">
+            <summary></summary>
+            <remarks>ER_SLAVE_WAS_NOT_RUNNING</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.TooBigForUncompress">
             <summary></summary>
@@ -8537,9 +8975,15 @@
             <summary></summary>
             <remarks>ER_UNKNOWN_COLLATION</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaIgnoreSSLParameters">
             <summary></summary>
             <remarks>ER_REPLICA_IGNORED_SSL_PARAMS</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveIgnoreSSLParameters">
+            <summary></summary>
+            <remarks>ER_SLAVE_IGNORED_SSL_PARAMS</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ServerIsInSecureAuthMode">
             <summary></summary>
@@ -8549,6 +8993,7 @@
             <summary></summary>
             <remarks>ER_WARN_FIELD_RESOLVED</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.BadReplicaUntilCondition">
             <summary></summary>
             <remarks>ER_BAD_REPLICA_UNTIL_COND</remarks>
@@ -8556,6 +9001,15 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MissingSkipReplica">
             <summary></summary>
             <remarks>ER_MISSING_SKIP_REPLICA</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.BadSlaveUntilCondition">
+            <summary></summary>
+            <remarks>ER_BAD_SLAVE_UNTIL_COND</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.MissingSkipSlave">
+            <summary></summary>
+            <remarks>ER_MISSING_SKIP_SLAVE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ErrorUntilConditionIgnored">
             <summary></summary>
@@ -9801,9 +10255,15 @@
             <summary></summary>
             <remarks>ER_EVENT_CANNOT_ALTER_IN_THE_PAST</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaIncident">
             <summary></summary>
             <remarks>ER_REPLICA_INCIDENT</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveIncident">
+            <summary></summary>
+            <remarks>ER_SLAVE_INCIDENT</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.NoPartitionForGivenValueSilent">
             <summary></summary>
@@ -9813,6 +10273,7 @@
             <summary></summary>
             <remarks>ER_BINLOG_UNSAFE_STATEMENT</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaFatalError">
             <summary></summary>
             <remarks>ER_REPLICA_FATAL_ERROR</remarks>
@@ -9832,6 +10293,27 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaSourceComFailure">
             <summary></summary>
             <remarks>ER_REPLICA_SOURCE_COM_FAILURE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveFatalError">
+            <summary></summary>
+            <remarks>ER_SLAVE_FATAL_ERROR</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveRelayLogReadFailure">
+            <summary></summary>
+            <remarks>ER_SLAVE_RELAY_LOG_READ_FAILURE</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveRelayLogWriteFailure">
+            <summary></summary>
+            <remarks>ER_SLAVE_RELAY_LOG_WRITE_FAILURE</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveCreateEventFailure">
+            <summary></summary>
+            <remarks>ER_SLAVE_CREATE_EVENT_FAILURE</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveMasterComFailure">
+            <summary></summary>
+            <remarks>ER_SLAVE_MASTER_COM_FAILURE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.BinLogLoggingImpossible">
             <summary></summary>
@@ -9873,17 +10355,29 @@
             <summary></summary>
             <remarks>ER_CANT_CREATE_SROUTINE</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaAmbiguousExecMode">
             <summary></summary>
             <remarks>ER_REPLICA_AMBIGOUS_EXEC_MODE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveAmbiguousExecMode">
+            <summary></summary>
+            <remarks>ER_SLAVE_AMBIGOUS_EXEC_MODE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.NoFormatDescriptionEventBeforeBinLogStatement">
             <summary></summary>
             <remarks>ER_NO_FORMAT_DESCRIPTION_EVENT_BEFORE_BINLOG_STATEMENT</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaCorruptEvent">
             <summary></summary>
             <remarks>ER_REPLICA_CORRUPT_EVENT</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveCorruptEvent">
+            <summary></summary>
+            <remarks>ER_SLAVE_CORRUPT_EVENT</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.LoadDataInvalidColumn">
             <summary></summary>
@@ -9909,9 +10403,15 @@
             <summary></summary>
             <remarks>ER_DELAYED_NOT_SUPPORTED</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.WarningNoSourceInfo">
             <summary></summary>
             <remarks>WARN_NO_SOURCE_INFO</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.WarningNoMasterInfo">
+            <summary></summary>
+            <remarks>WARN_NO_MASTER_INFO</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.WarningOptionIgnored">
             <summary></summary>
@@ -9933,6 +10433,7 @@
             <summary></summary>
             <remarks>ER_WARN_ENGINE_TRANSACTION_ROLLBACK</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaHeartbeatFailure">
             <summary></summary>
             <remarks>ER_REPLICA_HEARTBEAT_FAILURE</remarks>
@@ -9940,6 +10441,15 @@
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ReplicaHeartbeatValueOutOfRange">
             <summary></summary>
             <remarks>ER_REPLICA_HEARTBEAT_VALUE_OUT_OF_RANGE</remarks>
+=======
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveHeartbeatFailure">
+            <summary></summary>
+            <remarks>ER_SLAVE_HEARTBEAT_FAILURE</remarks>
+        </member>
+        <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.SlaveHeartbeatValueOutOfRange">
+            <summary></summary>
+            <remarks>ER_SLAVE_HEARTBEAT_VALUE_OUT_OF_RANGE</remarks>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.NDBReplicationSchemaError">
             <summary></summary>
@@ -10009,10 +10519,13 @@
             <summary></summary>
             <remarks>ER_ERROR_LAST</remarks>
         </member>
+<<<<<<< HEAD
         <member name="F:MySql.Data.MySqlClient.MySqlErrorCode.ErrorClientInteractionTimeout">
             <summary></summary>
             <remarks>ER_CLIENT_INTERACTION_TIMEOUT</remarks>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="M:MySql.Data.MySqlClient.MySqlPacket.WriteInteger(System.Int64,System.Int32)">
             <summary>
             WriteInteger
@@ -10429,11 +10942,16 @@
             server capabilities and our user requested options.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySql.Data.MySqlClient.NativeDriver.SendQuery(MySql.Data.MySqlClient.MySqlPacket,System.Int32)">
+=======
+        <member name="M:MySql.Data.MySqlClient.NativeDriver.SendQuery(MySql.Data.MySqlClient.MySqlPacket)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Query is the method that is called to send all queries to the server
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySql.Data.MySqlClient.NativeDriver.ValidateLocalInfileSafePath(System.String)">
             <summary>
             Verify that the file to upload is in a valid directory
@@ -10442,6 +10960,8 @@
             </summary>
             <param name="filePath">File to validate against the safe path.</param>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="M:MySql.Data.MySqlClient.NativeDriver.SendFileToServer(System.String)">
             <summary>
             Sends the specified file to the server. 
@@ -10528,12 +11048,16 @@
         </member>
         <member name="P:MySql.Data.MySqlClient.ReplicationServerConfigurationElement.IsMaster">
             <summary>
+<<<<<<< HEAD
             Gets or sets whether the replication server is configured as source.
             </summary>
         </member>
         <member name="P:MySql.Data.MySqlClient.ReplicationServerConfigurationElement.IsSource">
             <summary>
             Gets or sets whether the replication server is configured as source.
+=======
+            Gets or sets whether the replication server is configured as master.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.MySqlClient.ReplicationServerConfigurationElement.ConnectionString">
@@ -10573,7 +11097,11 @@
             Gets the next server from a replication group
             </summary>
             <param name="groupName">Group name</param>
+<<<<<<< HEAD
             <param name="isSource">True if the server to return must be a source</param>
+=======
+            <param name="isMaster">True if the server to return must be a master</param>
+>>>>>>> RamaMantenimiento9959189131
             <returns>Replication Server defined by the Load Balancing plugin</returns>
         </member>
         <member name="M:MySql.Data.MySqlClient.Replication.ReplicationManager.GetGroup(System.String)">
@@ -10595,7 +11123,11 @@
             Assigns a new server driver to the connection object
             </summary>
             <param name="groupName">Group name</param>
+<<<<<<< HEAD
             <param name="source">True if the server connection to assign must be a source</param>
+=======
+            <param name="master">True if the server connection to assign must be a master</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connection">MySqlConnection object where the new driver will be assigned</param>
         </member>
         <member name="T:MySql.Data.MySqlClient.Replication.ReplicationRoundRobinServerGroup">
@@ -10607,7 +11139,11 @@
             <summary>
             Gets an available server based on Round Robin load balancing.
             </summary>
+<<<<<<< HEAD
             <param name="isSource">Flag indicating if the server to return must be a source.</param>
+=======
+            <param name="isMaster">Flag indicating if the server to return must be a master.</param>
+>>>>>>> RamaMantenimiento9959189131
             <returns>A <see cref="T:MySql.Data.MySqlClient.Replication.ReplicationServer"/> object representing the next available server.</returns>
         </member>
         <member name="T:MySql.Data.MySqlClient.Replication.ReplicationServer">
@@ -10622,12 +11158,16 @@
         </member>
         <member name="P:MySql.Data.MySqlClient.Replication.ReplicationServer.IsMaster">
             <summary>
+<<<<<<< HEAD
             Gets a value indicating whether the server is source or replica.
             </summary>
         </member>
         <member name="P:MySql.Data.MySqlClient.Replication.ReplicationServer.IsSource">
             <summary>
             Gets a value indicating whether the server is source or replica.
+=======
+            Gets a value indicating whether the server is master or slave.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.MySqlClient.Replication.ReplicationServer.ConnectionString">
@@ -10674,7 +11214,11 @@
             Adds a server into the group.
             </summary>
             <param name="name">The server name.</param>
+<<<<<<< HEAD
             <param name="isSource">A flag indicating if the server to add is source or replica.</param>
+=======
+            <param name="isMaster">A flag indicating if the server to add is master or slave.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connectionString">The connection string used by this server.</param>
             <returns>A <see cref="T:MySql.Data.MySqlClient.Replication.ReplicationServer"/> object representing the recently added object.</returns>
         </member>
@@ -10695,7 +11239,11 @@
             <summary>
             Must be implemented. Defines the next server for a custom load balancing implementation.
             </summary>
+<<<<<<< HEAD
             <param name="isSource">Defines if the server to return is a source or any.</param>
+=======
+            <param name="isMaster">Defines if the server to return is a master or any.</param>
+>>>>>>> RamaMantenimiento9959189131
             <returns>The next server based on the load balancing implementation.
             Null if no available server is found.
             </returns>
@@ -10704,7 +11252,11 @@
             <summary>
             Defines the next server for a custom load balancing implementation.
             </summary>
+<<<<<<< HEAD
             <param name="isSource">Defines if the server to return is a source or any.</param>
+=======
+            <param name="isMaster">Defines if the server to return is a master or any.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="settings">Currently not being used.</param>
             <returns>The next server based on the load balancing implementation.
             Null if no available server is found.
@@ -10801,6 +11353,7 @@
             <param name="filterName">Only get foreign keys that match this name.</param>
             <param name="includeColumns">Should column information be included in the table.</param>
         </member>
+<<<<<<< HEAD
         <member name="M:MySql.Data.MySqlClient.Statement.BuildInitialPartQueryPacket(MySql.Data.MySqlClient.MySqlParameterCollection,MySql.Data.MySqlClient.MySqlAttributeCollection)">
             <summary>
             Builds the initial part of the COM_QUERY packet
@@ -10809,6 +11362,8 @@
             <param name="attributes">Collection of attributes</param>
             <returns>A <see cref="T:MySql.Data.MySqlClient.MySqlPacket"/></returns>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="M:MySql.Data.MySqlClient.Statement.SerializeParameter(MySql.Data.MySqlClient.MySqlParameterCollection,MySql.Data.MySqlClient.MySqlPacket,System.String,System.Int32)">
             <summary>
             Serializes the given parameter to the given memory stream
@@ -11237,6 +11792,7 @@
       </code>
     </example>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.MySqlClient.X.XDevAPI.Common.ColumnType">
             <summary>
             Defines the type of the column.
@@ -12079,6 +12635,294 @@
         <member name="M:MySql.Data.common.SslPemCertificateValidator.ReadSslCertificate(System.String)">
             <summary>
             Reads the SSL certificate file.
+=======
+        <member name="T:MySql.Data.Common.DnsResolver">
+            <summary>
+            DNS resolver that runs queries against a server.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.DnsResolver.CreateResolver(System.String,Ubiety.Dns.Core.Common.TransportType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ubiety.Dns.Core.Resolver"/> class.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.DnsResolver.GetDnsSrvRecords(System.String)">
+            <summary>
+            Gets the DNS SVR records of the service name that is provided.
+            </summary>
+            <returns>A list of <see cref="T:MySql.Data.Common.DnsSrvRecord"/>s sorted as described in RFC2782.</returns>
+        </member>
+        <member name="M:MySql.Data.Common.DnsResolver.SortSrvRecords(System.Collections.Generic.List{MySql.Data.Common.DnsSrvRecord})">
+            <summary>
+            Sorts a list of DNS SRV records according to the sorting rules described in RFC2782.
+            </summary>
+            <param name="srvRecords">List of <see cref="T:MySql.Data.Common.DnsSrvRecord"/>s to sort.</param>
+            <returns>A new list of sorted <see cref="T:MySql.Data.Common.DnsSrvRecord"/>s.</returns>
+        </member>
+        <member name="M:MySql.Data.Common.DnsResolver.Reset">
+            <summary>
+            Resets the DnsSrvResolver
+            </summary>
+        </member>
+        <member name="T:MySql.Data.Common.DnsSrvRecord">
+            <summary>
+            Class that represents a DNS SRV record.
+            RFC 2782 (https://tools.ietf.org/html/rfc2782)
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Common.DnsSrvRecord.Port">
+            <summary>
+            Gets the port.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Common.DnsSrvRecord.Priority">
+            <summary>
+            Gets the priority.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Common.DnsSrvRecord.Target">
+            <summary>
+            Gets the target domain name.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Common.DnsSrvRecord.Weight">
+            <summary>
+            Gets the weight.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.DnsSrvRecord.#ctor(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of <see cref="T:MySql.Data.Common.DnsSrvRecord"/> class.
+            </summary>
+            <param name="port">The port.</param>
+            <param name="priority">The priority.</param>
+            <param name="target">The target.</param>
+            <param name="weight">The weight.</param>
+        </member>
+        <member name="M:MySql.Data.Common.DnsSrvRecord.#ctor(Ubiety.Dns.Core.Records.RecordSrv)">
+            <summary>
+            Initializes a new instance of <see cref="T:MySql.Data.Common.DnsSrvRecord"/> class.
+            </summary>
+            <param name="recordSRV">The DNS SRV record.</param>
+        </member>
+        <member name="M:MySql.Data.Common.DnsSrvRecord.Compare(MySql.Data.Common.DnsSrvRecord,MySql.Data.Common.DnsSrvRecord)">
+            <summary>
+            Compare two <see cref="T:MySql.Data.Common.DnsSrvRecord"/> objects. First, using their priority and
+            if both have the same, then using their weights.
+            </summary>
+            <param name="x">A <see cref="T:MySql.Data.Common.DnsSrvRecord"/> to compare.</param>
+            <param name="y">A <see cref="T:MySql.Data.Common.DnsSrvRecord"/> to compare.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MySql.Data.Common.DnsSrvRecord.op_Implicit(Ubiety.Dns.Core.Records.RecordSrv)~MySql.Data.Common.DnsSrvRecord">
+            <summary>
+            Initializes a new instance of the <see cref="T:MySql.Data.Common.DnsSrvRecord"/> class from a <see cref="T:Ubiety.Dns.Core.Records.RecordSrv"/>.
+            </summary>
+            <param name="recordSRV">The DNS SRV record.</param>
+        </member>
+        <member name="T:MySql.Data.Common.LowResolutionStopwatch">
+            <summary>
+            This class is modeled after .NET Stopwatch. It provides better
+            performance (no system calls).It is however less precise than
+            .NET Stopwatch, measuring in milliseconds. It is adequate to use
+            when high-precision is not required (e.g for measuring IO timeouts),
+            but not for other tasks.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.Common.MyNetworkStream.MaxRetryCount">
+             <summary>
+             Wrapper around NetworkStream.
+             
+             MyNetworkStream is equivalent to NetworkStream, except 
+             1. It throws TimeoutException if read or write timeout occurs, instead 
+             of IOException, to match behavior of other streams (named pipe and 
+             shared memory). This property comes handy in TimedStream.
+            
+             2. It implements workarounds for WSAEWOULDBLOCK errors, that can start 
+             occuring after stream has times out. For a discussion about the CLR bug,
+             refer to  http://tinyurl.com/lhgpyf. This error should never occur, as
+             we're not using asynchronous operations, but apparerntly it does occur
+             directly after timeout has expired.
+             The workaround is hinted in the URL above and implemented like this:
+             For each IO operation, if it throws WSAEWOULDBLOCK, we explicitely set
+             the socket to Blocking and retry the operation once again.
+             </summary>
+        </member>
+        <member name="M:MySql.Data.Common.MyNetworkStream.SetKeepAlive(System.Net.Sockets.Socket,System.UInt32)">
+            <summary>
+            Set keepalive + timeout on socket.
+            </summary>
+            <param name="s">socket</param>
+            <param name="time">keepalive timeout, in seconds</param>
+        </member>
+        <member name="T:MySql.Data.Common.MySqlSshClientManager">
+            <summary>
+            Static class to manage SSH connections created with SSH .NET.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Common.MySqlSshClientManager.CurrentSshClient">
+            <summary>
+            Gets or sets the SSH client initialized when calling the <seealso cref="M:MySql.Data.Common.MySqlSshClientManager.SetupSshClient(System.String,System.String,System.String,System.String,System.String,System.UInt32,System.String,System.UInt32,System.Boolean)"/> method.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.Common.MySqlSshClientManager._sshClientList">
+            <summary>
+            Stores a list of SSH clients having different connection settings.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.MySqlSshClientManager.SetupSshClient(System.String,System.String,System.String,System.String,System.String,System.UInt32,System.String,System.UInt32,System.Boolean)">
+            <summary>
+            Initializes an <see cref="T:Renci.SshNet.SshClient"/> instance if no SSH client with similar connection options has already been initialized.
+            </summary>
+            <param name="sshHostName">The SSH host name.</param>
+            <param name="sshUserName">The SSH user name.</param>
+            <param name="sshPassword">The SSH password.</param>
+            <param name="sshKeyFile">The SSH key file.</param>
+            <param name="sshPassphrase">The SSH pass phrase.</param>
+            <param name="sshPort">The SSH port.</param>
+            <param name="server">The local host name.</param>
+            <param name="port">The local port number.</param>
+            <param name="isXProtocol">Flag to indicate if the connection will be created for the classic or X Protocol.</param>
+            <returns></returns>
+        </member>
+        <member name="M:MySql.Data.Common.MySqlTokenizer.ReadQuotedToken(System.Char)">
+            <summary>
+             Read a single quoted identifier from the stream
+            </summary>
+            <param name="quoteChar"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MySql.Data.Common.SharedMemory">
+            <summary>
+            Helper class to encapsulate shared memory functionality
+            Also cares of proper cleanup of file mapping object and cew
+            </summary>
+        </member>
+        <member name="T:MySql.Data.Common.SharedMemoryStream">
+            <summary>
+            Summary description for SharedMemoryStream.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.Platform.#ctor">
+            <summary>
+            By creating a private ctor, we keep the compiler from creating a default ctor
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.QueryNormalizer.ProcessMathSymbols(System.Collections.Generic.List{MySql.Data.Common.Token})">
+            <summary>
+            Mark - or + signs that are unary ops as no output
+            </summary>
+            <param name="tok"></param>
+        </member>
+        <member name="T:MySql.Data.Common.Ssh">
+            <summary>
+            Wrapper class used for handling SSH connections.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.Ssh.StartClient">
+            <summary>
+            Starts the SSH client.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.Ssh.StopClient">
+            <summary>
+            Stops the SSH client.
+            </summary>
+        </member>
+        <member name="T:MySql.Data.Common.Ssl">
+            <summary>
+            Handles SSL connections for the Classic and X protocols.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.Common.Ssl._settings">
+            <summary>
+            Contains the connection options provided by the user.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.Common.Ssl._treatCertificatesAsPemFormat">
+            <summary>
+            A flag to establish how certificates are to be treated and validated.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.Common.Ssl.tlsProtocols">
+            <summary>
+            Defines the supported TLS protocols.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.Ssl.GetPFXClientCertificates">
+            <summary>
+            Retrieves a collection containing the client SSL PFX certificates.
+            </summary>
+            <remarks>Dependent on connection string settings.
+            Either file or store based certificates are used.</remarks>
+        </member>
+        <member name="M:MySql.Data.Common.Ssl.StartSSL(System.IO.Stream@,System.Text.Encoding,System.String)">
+            <summary>
+            Initiates the SSL connection.
+            </summary>
+            <param name="baseStream">The base stream.</param>
+            <param name="encoding">The encoding used in the SSL connection.</param>
+            <param name="connectionString">The connection string used to establish the connection.</param>
+            <returns>A <see cref="T:MySql.Data.MySqlClient.MySqlStream"/> instance ready to initiate an SSL connection.</returns>
+        </member>
+        <member name="M:MySql.Data.Common.Ssl.ServerCheckValidation(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            Verifies the SSL certificates used for authentication.
+            </summary>
+            <param name="sender">An object that contains state information for this validation.</param>
+            <param name="certificate">The MySQL server certificate used to authenticate the remote party.</param>
+            <param name="chain">The chain of certificate authorities associated with the remote certificate.</param>
+            <param name="sslPolicyErrors">One or more errors associated with the remote certificate.</param>
+            <returns><c>true</c> if no errors were found based on the selected SSL mode; <c>false</c>, otherwise.</returns>
+        </member>
+        <member name="M:MySql.Data.Common.Ssl.GetCertificateFileExtension(System.String,System.Boolean)">
+            <summary>
+            Gets the extension of the specified file.
+            </summary>
+            <param name="filePath">The path of the file.</param>
+            <param name="toLowerCase">Flag to indicate if the result should be converted to lower case.</param>
+            <remarks>The . character is ommited from the result.</remarks>
+            <returns></returns>
+        </member>
+        <member name="T:MySql.Data.Common.StreamCreator">
+            <summary>
+            Summary description for StreamCreator.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.Common.StreamCreator.SetKeepAlive(System.Net.Sockets.Socket,System.UInt32)">
+            <summary>
+            Set the keepalive timeout on the socket.
+            </summary>
+            <param name="s">The socket object.</param>
+            <param name="time">The keepalive timeout, in seconds.</param>
+        </member>
+        <member name="T:MySql.Data.Common.DBVersion">
+            <summary>
+            Summary description for Version.
+            </summary>
+        </member>
+        <member name="T:MySql.Data.common.SslPemCertificateValidator">
+            <summary>
+            Provides functionality to read SSL PEM certificates and to perform multiple validations via Bouncy Castle.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.common.SslPemCertificateValidator.VerifyEmptyOrWhitespaceSslConnectionOption(System.String,System.String)">
+            <summary>
+            Raises an exception if the specified connection option is null, empty or whitespace.
+            </summary>
+            <param name="connectionOption">The connection option to verify.</param>
+        </member>
+        <member name="M:MySql.Data.common.SslPemCertificateValidator.GetBuffer(System.String)">
+            <summary>
+            Reads the specified file as a byte array.
+            </summary>
+            <param name="fileName">The path of the file to read.</param>
+            <returns>A byte array representing the read file.</returns>
+        </member>
+        <member name="M:MySql.Data.common.SslPemCertificateValidator.ReadSslCertificate(System.String)">
+            <summary>
+            Reads the SSL certificate file.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
             <param name="filePath">The path to the certificate file.</param>
             <returns>A <see cref="T:Org.BouncyCastle.X509.X509Certificate"/> instance representing the SSL certificate file.</returns>
@@ -12179,7 +13023,10 @@
             <param name="originalConnectionString">The original connection string set by the user.</param>
             <param name="connectionString">An out parameter that stores the updated connection string.</param>
             <param name="client">A <see cref="T:MySqlX.XDevAPI.Client"/> object in case this is a pooling scenario.</param>
+<<<<<<< HEAD
             <param name="isDefaultPort">A flag indicating if the default port is used in the connection.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
             <returns>An <see cref="T:MySqlX.Sessions.InternalSession"/> instance if the connection was succesfully established, a <see cref="T:MySql.Data.MySqlClient.MySqlException"/> exception is thrown otherwise.</returns>
         </member>
         <!-- Badly formed XML comment ignored for member "M:MySql.Data.Failover.FailoverManager.AttemptConnection(MySql.Data.MySqlClient.MySqlConnection,System.String,System.String@,System.Boolean)" -->
@@ -12372,11 +13219,14 @@
               Looks up a localized string similar to Authentication method &apos;{0}&apos; not supported by any of the available plugins..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.AuthenticationPluginNotSupported">
             <summary>
               Looks up a localized string similar to Authentication plugin &apos;{0}&apos; is currently not supported..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.BadVersionFormat">
             <summary>
               Looks up a localized string similar to Version string not in acceptable format.
@@ -12384,12 +13234,20 @@
         </member>
         <member name="P:MySql.Data.Resources.BufferCannotBeNull">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to The buffer cannot be null.
+=======
+              Looks up a localized string similar to  The buffer cannot be null.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.Resources.BufferNotLargeEnough">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to The buffer is not large enough.
+=======
+              Looks up a localized string similar to  Buffer is not large enough.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.Resources.CancelNeeds50">
@@ -12422,11 +13280,14 @@
               Looks up a localized string similar to Chaos isolation level is not supported .
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.ClearPasswordNotSupported">
             <summary>
               Looks up a localized string similar to Clear-password authentication is not supported over insecure channels..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.CommandTextNotInitialized">
             <summary>
               Looks up a localized string similar to The CommandText property has not been properly initialized..
@@ -12469,7 +13330,11 @@
         </member>
         <member name="P:MySql.Data.Resources.CountCannotBeNegative">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to Count cannot be negative.
+=======
+              Looks up a localized string similar to  Count cannot be negative.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.Resources.CSNoSetLength">
@@ -12537,11 +13402,14 @@
               Looks up a localized string similar to Error creating socket connection.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.ExecuteProcedureUnauthorized">
             <summary>
               Looks up a localized string similar to Verify that user &apos;{0}&apos;@&apos;{1}&apos; has enough privileges to execute..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.FatalErrorDuringExecute">
             <summary>
               Looks up a localized string similar to Fatal error encountered during command execution..
@@ -12627,11 +13495,14 @@
               Looks up a localized string similar to The provided key is invalid..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.InvalidCertificateThumbprint">
             <summary>
               Looks up a localized string similar to Certificate with Thumbprint &apos;{0}&apos; not found..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.InvalidColumnOrdinal">
             <summary>
               Looks up a localized string similar to You have specified an invalid column ordinal..
@@ -12662,11 +13533,14 @@
               Looks up a localized string similar to No other SSL options are accepted when SSL Mode is set to None..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.InvalidPathForLoadLocalInfile">
             <summary>
               Looks up a localized string similar to Either provide a valid path for &apos;allowloadlocalinfileinpath&apos; or enable &apos;allowloadlocalinfile&apos;..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.InvalidProcName">
             <summary>
               Looks up a localized string similar to Procedure or function &apos;{0}&apos; cannot be found in database &apos;{1}&apos;..
@@ -12717,6 +13591,70 @@
               Looks up a localized string similar to Option not supported..
             </summary>
         </member>
+<<<<<<< HEAD
+=======
+        <member name="P:MySql.Data.Resources.keywords">
+             <summary>
+               Looks up a localized string similar to ACCESSIBLE
+            ADD
+            ALL
+            ALTER
+            ANALYZE
+            AND
+            AS
+            ASC
+            ASENSITIVE
+            BEFORE
+            BEGIN
+            BETWEEN
+            BIGINT
+            BINARY
+            BLOB
+            BOTH
+            BY
+            CALL
+            CASCADE
+            CASE
+            CHANGE
+            CHAR
+            CHARACTER
+            CHECK
+            COLLATE
+            COLUMN
+            COMMIT
+            CONDITION
+            CONNECTION
+            CONSTRAINT
+            CONTINUE
+            CONVERT
+            CREATE
+            CROSS
+            CURRENT_DATE
+            CURRENT_TIME
+            CURRENT_TIMESTAMP
+            CURRENT_USER
+            CURSOR
+            DATABASE
+            DATABASES
+            DAY_HOUR
+            DAY_MICROSECOND
+            DAY_MINUTE
+            DAY_SECOND
+            DEC
+            DECIMAL
+            DECLARE
+            DEFAULT
+            DELAYED
+            DELETE
+            DESC
+            DESCRIBE
+            DETERMINISTIC
+            DISTINCT
+            DISTINCTROW
+            D [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.LocalInfileDisabled">
             <summary>
               Looks up a localized string similar to Server asked for stream in response to LOAD DATA LOCAL INFILE, but the functionality is disabled by the client setting &apos;allowlocalinfile&apos; to &apos;false&apos;..
@@ -12789,7 +13727,11 @@
         </member>
         <member name="P:MySql.Data.Resources.OffsetCannotBeNegative">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to The offset cannot be negative.
+=======
+              Looks up a localized string similar to  Offset cannot be negative.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.Resources.OffsetMustBeValid">
@@ -12892,6 +13834,7 @@
               Looks up a localized string similar to same name are not supported..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.QueryAttributesNotSupported">
             <summary>
               Looks up a localized string similar to MySQL Server {0} dos not support query attributes..
@@ -12902,6 +13845,8 @@
               Looks up a localized string similar to MySQL Connector/NET does not support query attributes with prepared statements for this version of MySQL Server..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.QueryTooLarge">
             <summary>
               Looks up a localized string similar to Packets larger than max_allowed_packet are not allowed..
@@ -12982,6 +13927,19 @@
               Looks up a localized string similar to Stored procedures are not supported on this version of MySQL.
             </summary>
         </member>
+<<<<<<< HEAD
+=======
+        <member name="P:MySql.Data.Resources.SshAuthenticationModeNotSet">
+            <summary>
+              Looks up a localized string similar to The SSH Key File and/or SSH Password must be provided..
+            </summary>
+        </member>
+        <member name="P:MySql.Data.Resources.SshInvalidPassphrase">
+            <summary>
+              Looks up a localized string similar to The provided passphrase is invalid..
+            </summary>
+        </member>
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.SslCertificateCAMismatch">
             <summary>
               Looks up a localized string similar to The certificate authority (CA) does not match..
@@ -13002,11 +13960,14 @@
               Looks up a localized string similar to SSL Connection error..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.SslNotAllowedForConnectionProtocol">
             <summary>
               Looks up a localized string similar to Connection protocol &apos;{0}&apos; does not support SSL connections..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.StreamAlreadyClosed">
             <summary>
               Looks up a localized string similar to The stream has already been closed.
@@ -13014,7 +13975,11 @@
         </member>
         <member name="P:MySql.Data.Resources.StreamNoRead">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to The stream does not support reading.
+=======
+              Looks up a localized string similar to  The stream does not support reading.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.Resources.StreamNoWrite">
@@ -13042,11 +14007,14 @@
               Looks up a localized string similar to All server connection attempts were aborted. Timeout of {0} seconds was exceeded for each selected server..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.TlsDeprecationWarning">
             <summary>
               Looks up a localized string similar to This connection is using {0}, which is now deprecated and will be removed in a future release of Connector/NET..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.Tlsv13NotSupported">
             <summary>
               Looks up a localized string similar to TLSv1.3 is supported in .NET Framework 4.8 or .NET Core 3.0..
@@ -13232,11 +14200,14 @@
               Looks up a localized string similar to Unknown connection protocol.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.Resources.UnsafePathForLoadLocalInfile">
             <summary>
               Looks up a localized string similar to Trying to upload a file from outside the path set on &apos;allowloadlocalinfileinpath&apos; is invalid..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.Resources.ValueNotCorrectType">
             <summary>
               Looks up a localized string similar to Value &apos;{0}&apos; is not of the correct type..
@@ -13308,11 +14279,25 @@
               Looks up a localized string similar to {0} &apos;{1}&apos; does not exist in schema &apos;{2}&apos;..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.ResourcesX.CompressionAlgorithmNegotiationFailed">
             <summary>
               Looks up a localized string similar to Compression requested but the compression algorithm negotiation failed..
             </summary>
         </member>
+=======
+        <member name="P:MySql.Data.ResourcesX.DnsSrvConflictingOptions">
+            <summary>
+              Looks up a localized string similar to &apos;{0}&apos; cannot be set to false with DNS SRV lookup enabled..
+            </summary>
+        </member>
+        <member name="P:MySql.Data.ResourcesX.DnsSrvInvalidScheme">
+            <summary>
+              Looks up a localized string similar to Scheme &apos;{0}&apos; is not valid..
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:MySql.Data.ResourcesX.CompressionAlgorithmNegotiationFailed" -->
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.ResourcesX.CompressionAlgorithmNotSupported">
             <summary>
               Looks up a localized string similar to Compression using {0} is not supported..
@@ -13348,6 +14333,7 @@
               Looks up a localized string similar to There are still decompressed messages pending to be processed..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.ResourcesX.DnsSrvConflictingOptions">
             <summary>
               Looks up a localized string similar to &apos;{0}&apos; cannot be set to false with DNS SRV lookup enabled..
@@ -13358,6 +14344,8 @@
               Looks up a localized string similar to Scheme &apos;{0}&apos; is not valid..
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.ResourcesX.DuplicateUserDefinedAttribute">
             <summary>
               Looks up a localized string similar to Duplicate key &apos;{0}&apos; used in &quot;connection-attributes&quot;..
@@ -13485,7 +14473,11 @@
         </member>
         <member name="P:MySql.Data.ResourcesX.MissingSchemaOption">
             <summary>
+<<<<<<< HEAD
               Looks up a localized string similar to Missed required schema option..
+=======
+              Looks up a localized string similar to Missed required &apos;schema&apos; option..
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.ResourcesX.MoreThanOneDocumentId">
@@ -13518,6 +14510,7 @@
               Looks up a localized string similar to No placeholders..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.ResourcesX.NoticeIdleConnection">
             <summary>
               Looks up a localized string similar to Connection closed. Reason: connection idle was too long.
@@ -13533,6 +14526,8 @@
               Looks up a localized string similar to Connection closed. Reason: server was shutdown.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySql.Data.ResourcesX.NumberNotGreaterThanZero">
             <summary>
               Looks up a localized string similar to {0} must be a value greater than 0..
@@ -13568,6 +14563,7 @@
               Looks up a localized string similar to ProgramData path is not defined..
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySql.Data.ResourcesX.ReplaceWithNoMatchingId">
              <summary>
                Looks up a localized string similar to Replacement document has an &apos;_id&apos; that is
@@ -13577,6 +14573,11 @@
         <member name="P:MySql.Data.ResourcesX.SchemaCreateCollectionMsg">
             <summary>
               Looks up a localized string similar to The server doesn&apos;t support the requested operation. Please update the MySQL Server, client library, or both..
+=======
+        <member name="P:MySql.Data.ResourcesX.SchemaCreateCollectionMsg">
+            <summary>
+              Looks up a localized string similar to The server doesn&apos;t support the requested operation. Please update the MySQL Server and/or Client library.
+>>>>>>> RamaMantenimiento9959189131
             </summary>
         </member>
         <member name="P:MySql.Data.ResourcesX.ThrowingAwayResults">
@@ -13845,6 +14846,7 @@
             </summary>
             <returns>A string representation of the WKT.</returns>
         </member>
+<<<<<<< HEAD
         <member name="T:MySql.Data.X.Communication.XPacketProcessor">
             <summary>
             Enables X Protocol packets from the network stream to be retrieved and processed
@@ -13932,98 +14934,193 @@
             <returns>An integer that indicates the lexical relationship between the two comparands, similar to <see cref="M:System.String.Compare(System.String,System.String)"/></returns>
         </member>
         <member name="T:MySqlX.Common.UnmanagedLibraryLoader">
+=======
+        <member name="T:MySql.Data.X.common.UnmanagedLibraryLoader">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Provides functionality for loading unmanaged libraries.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Common.UnmanagedLibraryLoader.LoadUnmanagedLibraryFromEmbeddedResources(System.String,System.String)">
+=======
+        <member name="M:MySql.Data.X.common.UnmanagedLibraryLoader.LoadUnmanagedLibraryFromEmbeddedResources(System.String,System.String)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Loads the specified unmanaged library from the embedded resources.
             </summary>
             <param name="applicationName">The application name.</param>
             <param name="libraryName">The library name.</param>
         </member>
+<<<<<<< HEAD
         <member name="T:MySqlX.Communication.XCompressionController">
+=======
+        <member name="T:MySql.Data.X.Communication.XCompressionController">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Provides support for configuring X Protocol compressed messages.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.ALGORITHMS_SUBKEY">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.ALGORITHMS_SUBKEY">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             The capabilities sub-key used to specify the compression algorithm.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.COMPRESSION_KEY">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.COMPRESSION_KEY">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             The capabilities key used to specify the compression capability.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.COMPRESSION_THRESHOLD">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.COMPRESSION_THRESHOLD">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Messages with a value lower than this threshold will not be compressed.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.DEFAULT_SERVER_COMBINE_MIXED_MESSAGES_VALUE">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.DEFAULT_SERVER_COMBINE_MIXED_MESSAGES_VALUE">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Default value for enabling or disabling combined compressed messages.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.DEFAULT_SERVER_MAX_COMBINE_MESSAGES_VALUE">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.DEFAULT_SERVER_MAX_COMBINE_MESSAGES_VALUE">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Default value for the maximum number of combined compressed messages contained in a compression message.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.SERVER_COMBINE_MIXED_MESSAGES_SUBKEY">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.DEFLATE_STREAM_COMPRESSION_ALGORITHM">
+            <summary>
+            deflate_stream compression algorithm.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.X.Communication.XCompressionController.LZ4_MESSAGE_COMPRESSION_ALGORITHM">
+            <summary>
+            lz4_message compression algorithm.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.X.Communication.XCompressionController.SERVER_COMBINE_MIXED_MESSAGES_SUBKEY">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             The capabilities sub-key used to specify if combining compressed messages is permitted.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.SERVER_MAX_COMBINE_MESSAGES_SUBKEY">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.SERVER_MAX_COMBINE_MESSAGES_SUBKEY">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             The capabilities sub-key used to specify the maximum number of compressed messages contained in a compression message.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._buffer">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController.ZSTD_STREAM_COMPRESSION_ALGORITHM">
+            <summary>
+            zstd_stream compression algorithm.
+            </summary>
+        </member>
+        <member name="F:MySql.Data.X.Communication.XCompressionController._buffer">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Buffer used to store the data received from the server.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._deflateCompressStream">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._deflateCompressStream">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Deflate stream used for compressing data.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._deflateDecompressStream">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._deflateDecompressStream">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Deflate stream used for decompressing data.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._initializeForCompression">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._initializeForCompression">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Flag indicating if the initialization is for compression or decompression.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._lastCommunicationPacket">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._lastCommunicationPacket">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Stores the communication packet generated the last time ReadNextBufferedMessage method was called.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController.LibZstdLoaded">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._libzstdLoaded">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Indicates if the libzstd.dll has been loaded.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._multipleMessagesStream">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._multipleMessagesStream">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Stream used to store multiple X Protocol messages.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="F:MySqlX.Communication.XCompressionController._zstdDecompressStream">
+=======
+        <member name="F:MySql.Data.X.Communication.XCompressionController._zstdDecompressStream">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             ZStandard stream used for decompressing data.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.#ctor(MySql.Data.MySqlClient.CompressionAlgorithms,System.Boolean)">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.#cctor">
+            <summary>
+            Static constructor used to initialize the client supported compression algorithms.
+            </summary>
+        </member>
+        <member name="M:MySql.Data.X.Communication.XCompressionController.#ctor(System.String,System.Boolean)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Main constructor used to set the compression algorithm and initialize the list of messages to
             be compressed by the client.
@@ -14031,55 +15128,96 @@
             <param name="compressionAlgorithm">The compression algorithm to use.</param>
             <param name="initializeForCompression">Flag indicating if the initialization is for compression or decompression.</param>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.Communication.XCompressionController.ClientSupportedCompressedMessages">
+=======
+        <member name="P:MySql.Data.X.Communication.XCompressionController.ClientSupportedCompressedMessages">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Gets or sets the list of messages that should be compressed by the client when compression is enabled.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.Communication.XCompressionController.CompressionAlgorithm">
+=======
+        <member name="P:MySql.Data.X.Communication.XCompressionController.ClientSupportedCompressionAlgorithms">
+            <summary>
+            Gets or sets an array containing the compression algorithms supported by the client.
+            </summary>
+        </member>
+        <member name="P:MySql.Data.X.Communication.XCompressionController.CompressionAlgorithm">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Gets or sets the compression algorithm.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.Communication.XCompressionController.IsCompressionEnabled">
+=======
+        <member name="P:MySql.Data.X.Communication.XCompressionController.IsCompressionEnabled">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Flag indicating if compression is enabled.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.Communication.XCompressionController.LastMessageContainsMultipleMessages">
+=======
+        <member name="P:MySql.Data.X.Communication.XCompressionController.LastMessageContainsMultipleMessages">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Flag indicating if the last decompressed message contains multiple messages.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.Compress(System.Byte[])">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.Compress(System.Byte[])">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             General method used to compress data using the compression algorithm defined in the constructor.
             </summary>
             <param name="input">The data to compress.</param>
             <returns>A compressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.CompressUsingDeflateStream(System.Byte[])">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.CompressUsingDeflateStream(System.Byte[])">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Compresses data using the deflate_stream algorithm.
             </summary>
             <param name="input">The data to compress.</param>
             <returns>A compressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.CompressUsingLz4Message(System.Byte[])">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.CompressUsingLz4Message(System.Byte[])">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Compresses data using the lz4_message algorithm.
             </summary>
             <param name="input">The data to compress.</param>
             <returns>A compressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.CompressUsingZstdStream(System.Byte[])">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.CompressUsingZstdStream(System.Byte[])">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Compresses data using the zstd_stream algorithm.
             </summary>
             <param name="input">The data to compress.</param>
             <returns>A compressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.Decompress(System.Byte[],System.Int32)">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.Decompress(System.Byte[],System.Int32)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             General method used to decompress data using the compression algorithm defined in the constructor.
             </summary>
@@ -14087,7 +15225,11 @@
             <param name="length">The expected length of the decompressed data.</param>
             <returns>A decompressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.DecompressUsingDeflateStream(System.Byte[],System.Int32)">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.DecompressUsingDeflateStream(System.Byte[],System.Int32)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Decompresses data using the deflate_stream compression algorithm.
             </summary>
@@ -14095,7 +15237,11 @@
             <param name="length">The expected length of the decompressed data.</param>
             <returns>A decompressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.DecompressUsingLz4Message(System.Byte[],System.Int32)">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.DecompressUsingLz4Message(System.Byte[],System.Int32)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Decompresses data using the lz4_message compression algorithm.
             </summary>
@@ -14103,7 +15249,11 @@
             <param name="length">The expected length of the decompressed data.</param>
             <returns>A decompressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.DecompressUsingZstdStream(System.Byte[],System.Int32)">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.DecompressUsingZstdStream(System.Byte[],System.Int32)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Decompresses data using the zstd_stream compression algorithm.
             </summary>
@@ -14111,42 +15261,130 @@
             <param name="length">The expected length of the decompressed data.</param>
             <returns>A decompressed byte array.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.Close">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.Close">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Closes and disposes of any open streams.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.ReadNextBufferedMessage">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.ReadNextBufferedMessage">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Gets the byte array representing the next X Protocol frame that is stored in cache.
             </summary>
             <returns>A byte array representing an X Protocol frame.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.ReadNextBufferedMessageAsCommunicationPacket">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.ReadNextBufferedMessageAsCommunicationPacket">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Gets a <see cref="T:MySqlX.Communication.CommunicationPacket"/> representing the next X Protocol frame that is stored in cache.
             </summary>
             <returns>A <see cref="T:MySqlX.Communication.CommunicationPacket"/> with the next X Protocol frame.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XCompressionController.LoadLibzstdLibrary">
+=======
+        <member name="M:MySql.Data.X.Communication.XCompressionController.LoadLibzstdLibrary">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Loads the libzstd.dll assembly.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XPacketReaderWriter.#ctor(System.IO.Stream,System.Net.Sockets.Socket)">
+=======
+        <member name="T:MySql.Data.X.XDevAPI.Common.CreateCollectionOptions">
+            <summary>
+            This object store the required parameters to create a Collection with schema validation.
+            </summary>
+            <param name="ReuseExisting">If false, throws an exception if the collection exists.</param>
+            <param name="Validation">Object which hold the Level and Schema parameters</param>
+            <see cref="P:MySql.Data.X.XDevAPI.Common.CreateCollectionOptions.Validation"/>
+        </member>
+        <member name="P:MySql.Data.X.XDevAPI.Common.ModifyCollectionOptions.Validation">
+            <summary>
+            This object store the required parameters to Modify a Collection with schema validation.
+            </summary>
+            <param name="Validation">Object which hold the Level and Schema parameters</param>
+            <see cref="P:MySql.Data.X.XDevAPI.Common.ModifyCollectionOptions.Validation"/>
+        </member>
+        <member name="P:MySql.Data.X.XDevAPI.Common.Validation.Level">
+            <summary>
+            This object store the required parameters to create a Collection with schema validation.
+            </summary>
+            <param name="Level">It can be STRICT to enable schema validation or OFF to disable <see cref="T:MySql.Data.X.XDevAPI.Common.ValidationLevel"/></param>
+            <param name="Schema">The JSON which define the rules to be validated in the collection</param>
+        </member>
+        <member name="T:MySql.Data.X.XDevAPI.Common.ValidationLevel">
+            <summary>
+            The possible values for parameter Level in Validation object.
+            </summary>
+            <param name="STRICT">Enforce schema validation.</param>
+            <param name="OFF">Schema validation disabled.</param>
+        </member>
+        <member name="T:MySqlX.Security.ExternalAuthenticationPlugin">
+            <summary>
+            Implementation of EXTERNAL authentication type.
+            </summary>
+        </member>
+        <member name="T:MySqlX.Security.MySQL41AuthenticationPlugin">
+            <summary>
+            Implementation of MySQL41 authentication type.
+            </summary>
+        </member>
+        <member name="T:MySqlX.Security.PlainAuthenticationPlugin">
+            <summary>
+            Implementation of PLAIN authentication type.
+            </summary>
+        </member>
+        <member name="M:MySqlX.Common.Tools.CompareGuids(System.String,System.String)">
+            <summary>
+            Compares two Guids in string format.
+            </summary>
+            <param name="guid1">The first string to compare.</param>
+            <param name="guid2">The first string to compare.</param>
+            <returns>An integer that indicates the lexical relationship between the two comparands, similar to <see cref="M:System.String.Compare(System.String,System.String)"/></returns>
+        </member>
+        <member name="M:MySqlX.Common.Tools.CompareGuids(System.Guid,System.Guid)">
+            <summary>
+            Compares two <see cref="T:System.Guid"/> objects.
+            </summary>
+            <param name="guid1">The first <see cref="T:System.Guid"/> to compare.</param>
+            <param name="guid2">The second <see cref="T:System.Guid"/> to compare.</param>
+            <returns>An integer that indicates the lexical relationship between the two comparands, similar to <see cref="M:System.String.Compare(System.String,System.String)"/></returns>
+        </member>
+        <member name="M:MySqlX.Communication.XPacketReaderWriter.#ctor(System.IO.Stream)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Constructor that sets the stream used to read or write data.
             </summary>
             <param name="stream">The stream used to read or write data.</param>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Communication.XPacketReaderWriter.#ctor(System.IO.Stream,MySqlX.Communication.XCompressionController,MySqlX.Communication.XCompressionController,System.Net.Sockets.Socket)">
+=======
+        <member name="M:MySqlX.Communication.XPacketReaderWriter.#ctor(System.IO.Stream,MySql.Data.X.Communication.XCompressionController)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Constructor that sets the stream used to read or write data and the compression controller.
             </summary>
             <param name="stream">The stream used to read or write data.</param>
             <param name="compressionController">The compression controller.</param>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.Communication.XPacketReaderWriter.CompressionReadController">
+=======
+        <member name="P:MySqlX.Communication.XPacketReaderWriter.CompressionController">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Gets or sets the compression controller uses to manage compression operations.
             </summary>
@@ -14486,6 +15724,7 @@
             compression is enabled.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.Sessions.XInternalSession.VerifyDefaultOrder(System.String[]@)">
             <summary>
             Reorder the list of algorithms retrieved from server to the preferred order
@@ -14497,30 +15736,55 @@
             </summary>
         </member>
         <member name="M:MySqlX.Sessions.XInternalSession.NegotiateCompression(System.String[],System.String[])">
+=======
+        <member name="F:MySqlX.Sessions.XInternalSession._sshHandler">
+            <summary>
+            The used client to handle SSH connections.
+            </summary>
+        </member>
+        <member name="M:MySqlX.Sessions.XInternalSession.NegotiateCompression(System.String[])">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Negotiates compression capabilities with the server.
             </summary>
             <param name="serverSupportedAlgorithms">An array containing the compression algorithms supported by the server.</param>
+<<<<<<< HEAD
             <param name="clientAgainstUserAlgorithms">An array containing the compression algorithms given by user/client.</param>
         </member>
         <member name="M:MySqlX.Sessions.XInternalSession.CreateCollection(System.String,System.String,MySqlX.XDevAPI.Common.CreateCollectionOptions)">
+=======
+        </member>
+        <member name="M:MySqlX.Sessions.XInternalSession.CreateCollection(System.String,System.String,MySql.Data.X.XDevAPI.Common.CreateCollectionOptions)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Prepare the dictionary of arguments required to create a MySQL message.
             </summary>
             <param name="schemaName">The name of the MySQL schema.</param>
             <param name="collectionName">The name of the collection.</param>
             <param name="options">This object hold the parameters required to create the collection.</param>
+<<<<<<< HEAD
             <see cref="T:MySqlX.XDevAPI.Common.CreateCollectionOptions"/>
             <returns>Collection referente.</returns>
         </member>
         <member name="M:MySqlX.Sessions.XInternalSession.ModifyCollection(System.String,System.String,System.Nullable{MySqlX.XDevAPI.Common.ModifyCollectionOptions})">
+=======
+            <see cref="T:MySql.Data.X.XDevAPI.Common.CreateCollectionOptions"/>
+            <returns>Collection referente.</returns>
+        </member>
+        <member name="M:MySqlX.Sessions.XInternalSession.ModifyCollection(System.String,System.String,System.Nullable{MySql.Data.X.XDevAPI.Common.ModifyCollectionOptions})">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Prepare the dictionary of arguments required to Modify a MySQL message.
             </summary>
             <param name="schemaName">The name of the MySQL schema.</param>
             <param name="collectionName">The name of the collection.</param>
             <param name="options">This object hold the parameters required to Modify the collection.</param>
+<<<<<<< HEAD
             <see cref="T:MySqlX.XDevAPI.Common.ModifyCollectionOptions"/>
+=======
+            <see cref="T:MySql.Data.X.XDevAPI.Common.ModifyCollectionOptions"/>
+            <returns>Collection referente.</returns>
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="M:MySqlX.Sessions.XInternalSession.GetCompressionAlgorithm(System.Boolean)">
             <summary>
@@ -14566,7 +15830,10 @@
             Initializes a new instance of the BaseSession class based on the specified connection string.
             </summary>
             <param name="connectionString">The connection used to create the session.</param>
+<<<<<<< HEAD
             <param name="client">A <see cref="T:MySqlX.XDevAPI.Client"/> object.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
             <exception cref="T:System.ArgumentNullException"><paramref name="connectionString"/> is <c>null</c>.</exception>
             <exception cref="T:System.UriFormatException">Unable to parse the <paramref name="connectionString"/> when 
             in URI format.</exception>
@@ -14612,7 +15879,10 @@
             Initializes a new instance of the BaseSession class based on the specified anonymous type object.
             </summary>
             <param name="connectionData">The connection data as an anonymous type used to create the session.</param>
+<<<<<<< HEAD
             <param name="client">A <see cref="T:MySqlX.XDevAPI.Client"/> object.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
             <exception cref="T:System.ArgumentNullException"><paramref name="connectionData"/> is null.</exception>
             <remarks>
             <para>Multiple hosts can be specified as part of the <paramref name="connectionData"/>, which enables client-side failover when trying to
@@ -14706,7 +15976,10 @@
             Parses the connection data.
             </summary>
             <param name="connectionData">The connection string or connection URI.</param>
+<<<<<<< HEAD
             <param name="client">A <see cref="T:MySqlX.XDevAPI.Client"/> object.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
             <returns>An updated connection string representation of the provided connection string or connection URI.</returns>
         </member>
         <member name="M:MySqlX.XDevAPI.BaseSession.ParseConnectionUri(System.String)">
@@ -14730,7 +16003,10 @@
             <param name="uri">An <see cref="P:MySqlX.XDevAPI.BaseSession.Uri"/> instance with the values for the provided connection options.</param>
             <param name="unixSocketPath">The path of the Unix socket file.</param>
             <param name="parseServerAsUnixSocket">If <c>true</c> the <paramref name="unixSocketPath"/> replaces the value for the server connection option; otherwise, <c>false</c></param>
+<<<<<<< HEAD
             <param name="isDnsSrvScheme">Flag indicating if this is a connection using DNS SRV.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
             <returns>A connection string.</returns>
         </member>
         <member name="M:MySqlX.XDevAPI.BaseSession.ParseConnectionString(System.String)">
@@ -15148,6 +16424,7 @@
             No body has been defined for this method.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="T:MySqlX.XDevAPI.Common.CreateCollectionOptions">
             <summary>
             This object store the required parameters to create a Collection with schema validation.
@@ -15193,6 +16470,8 @@
             The possible values for parameter Level in Validation object.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySqlX.XDevAPI.Common.ErrorInfo">
             <summary>
             Class to represent an error in this result.
@@ -15690,11 +16969,14 @@
             <returns></returns>
             <exception cref="T:System.NotImplementedException">Exception is always thrown since the body of the method is not yet implemented.</exception>
         </member>
+<<<<<<< HEAD
         <member name="T:MySqlX.XDevAPI.MySqlExpression">
             <summary>
             Defines a MySql expression.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:MySqlX.XDevAPI.MySQLX">
             <summary>
             Main class for session operations related to Connector/NET implementation of the X DevAPI.
@@ -15704,8 +16986,12 @@
             <summary>
             Opens a session to the server given or to the first available server if multiple servers were specified.
             </summary>
+<<<<<<< HEAD
             <param name="connectionString">The connection string or URI string format.
             </param>
+=======
+            <param name="connectionString">The connection string or URI string format.</param>
+>>>>>>> RamaMantenimiento9959189131
             <returns>A <see cref="T:MySqlX.XDevAPI.Session"/> object representing the established session.</returns>
             <remarks>Multiple hosts can be specified as part of the <paramref name="connectionString"/> which
             will enable client side failover when trying to establish a connection. For additional details and syntax 
@@ -15715,16 +17001,24 @@
             <summary>
             Opens a session to the server given.
             </summary>
+<<<<<<< HEAD
             <param name="connectionData">The connection data for the server.
             </param>
+=======
+            <param name="connectionData">The connection data for the server.</param>
+>>>>>>> RamaMantenimiento9959189131
             <returns>A <see cref="T:MySqlX.XDevAPI.Session"/> object representing the established session.</returns>
         </member>
         <member name="M:MySqlX.XDevAPI.MySQLX.GetClient(System.String,System.String)">
             <summary>
             Creates a new <see cref="T:MySqlX.XDevAPI.Client"/> instance.
             </summary>
+<<<<<<< HEAD
             <param name="connectionString">The connection string or URI string format.
             </param>
+=======
+            <param name="connectionString">The connection string or URI string format.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connectionOptions">The connection options in JSON string format.</param>
             <returns>A <see cref="T:MySqlX.XDevAPI.Client"/> object representing a session pool.</returns>
         </member>
@@ -15732,8 +17026,12 @@
             <summary>
             Creates a new <see cref="T:MySqlX.XDevAPI.Client"/> instance.
             </summary>
+<<<<<<< HEAD
             <param name="connectionString">The connection string or URI string format.
             </param>
+=======
+            <param name="connectionString">The connection string or URI string format.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connectionOptions">The connection options in object format.
             <example>
             <code>
@@ -15754,8 +17052,12 @@
             <summary>
             Creates a new <see cref="T:MySqlX.XDevAPI.Client"/> instance.
             </summary>
+<<<<<<< HEAD
             <param name="connectionData">The connection data.
             </param>
+=======
+            <param name="connectionData">The connection data.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connectionOptions">The connection options in JSON string format.</param>
             <returns>A <see cref="T:MySqlX.XDevAPI.Client"/> object representing a session pool.</returns>
         </member>
@@ -15763,8 +17065,12 @@
             <summary>
             Creates a new <see cref="T:MySqlX.XDevAPI.Client"/> instance.
             </summary>
+<<<<<<< HEAD
             <param name="connectionData">The connection data.
             </param>
+=======
+            <param name="connectionData">The connection data.</param>
+>>>>>>> RamaMantenimiento9959189131
             <param name="connectionOptions">The connection options in object format.
             <example>
             <code>
@@ -15797,7 +17103,10 @@
             Constructor accepting a connection string.
             </summary>
             <param name="connectionString">The connection string.</param>
+<<<<<<< HEAD
             <param name="isDefaultPort">A flag indicating if the default port is used in the connection.</param>
+=======
+>>>>>>> RamaMantenimiento9959189131
         </member>
         <member name="F:MySqlX.XDevAPI.MySqlXConnectionStringBuilder.Options">
             <summary>
@@ -15824,11 +17133,14 @@
             Gets or sets the compression type between client and server.
             </summary>
         </member>
+<<<<<<< HEAD
         <member name="P:MySqlX.XDevAPI.MySqlXConnectionStringBuilder.CompressionAlgorithm">
             <summary>
             Gets or sets the compression algorithm.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="P:MySqlX.XDevAPI.MySqlXConnectionStringBuilder.Item(System.String)">
             <summary>
             Gets or sets a connection option.
@@ -16274,16 +17586,27 @@
             <param name="ReuseExisting">If false, throws an exception if the collection exists.</param>
             <returns>Collection referente.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.XDevAPI.Schema.CreateCollection(System.String,MySqlX.XDevAPI.Common.CreateCollectionOptions)">
+=======
+        <member name="M:MySqlX.XDevAPI.Schema.CreateCollection(System.String,MySql.Data.X.XDevAPI.Common.CreateCollectionOptions)">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Creates a collection including a schema validation.
             </summary>
             <param name="collectionName">The name of the collection to create.</param>
             <param name="options">This object hold the parameters required to create the collection.</param>
+<<<<<<< HEAD
             <see cref="T:MySqlX.XDevAPI.Common.CreateCollectionOptions"/>
             <returns>Collection referente.</returns>
         </member>
         <member name="M:MySqlX.XDevAPI.Schema.ModifyCollection(System.String,System.Nullable{MySqlX.XDevAPI.Common.ModifyCollectionOptions})">
+=======
+            <see cref="T:MySql.Data.X.XDevAPI.Common.CreateCollectionOptions"/>
+            <returns>Collection referente.</returns>
+        </member>
+        <member name="M:MySqlX.XDevAPI.Schema.ModifyCollection(System.String,System.Nullable{MySql.Data.X.XDevAPI.Common.ModifyCollectionOptions})">
+>>>>>>> RamaMantenimiento9959189131
             <summary>
             Modify a collection adding or removing schema validation parameters.
             </summary>
@@ -16328,11 +17651,14 @@
             </summary>
             <returns>Current database <see cref="T:MySqlX.XDevAPI.Schema"/> object or null if no schema is selected.</returns>
         </member>
+<<<<<<< HEAD
         <member name="M:MySqlX.XDevAPI.Session.ThrowSessionClosedByServerException(MySql.Data.MySqlClient.MySqlException,MySqlX.XDevAPI.BaseSession)">
             <summary>
             Closes the current session properly after it was closed by the server.
             </summary>
         </member>
+=======
+>>>>>>> RamaMantenimiento9959189131
         <member name="T:Mysqlx.MysqlxReflection">
             <summary>Holder for reflection information generated from mysqlx.proto</summary>
         </member>

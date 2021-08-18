@@ -8,9 +8,15 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Prototipo1P")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
+<<<<<<< HEAD
 [assembly: AssemblyCompany("HP Inc.")]
 [assembly: AssemblyProduct("Prototipo1P")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
+=======
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Prototipo1P")]
+[assembly: AssemblyCopyright("Copyright ©  2021")]
+>>>>>>> RamaMantenimiento9959189131
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +26,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
+<<<<<<< HEAD
 [assembly: Guid("f1ffce40-7461-4451-93f4-59bcece67a65")]
+=======
+[assembly: Guid("7e1dc8ef-f2fe-4ebc-85e8-b958b23953bc")]
+>>>>>>> RamaMantenimiento9959189131
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
